@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import Main from './components/main';
+import Main from './components/main/main';
 
 
 function App() {
