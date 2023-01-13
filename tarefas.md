@@ -1,6 +1,6 @@
-- [] fazer o cabeçário
-- [] fazer o botão dark mode
-- [] aplicar display flex no header
+- [X] fazer o cabeçário
+- [X] fazer o botão dark mode
+- [X] aplicar display flex no header
 - [] criar o campo do main
 - [] adicionar um input de pesquisa
 - [] adicionar uma caixa seletora
