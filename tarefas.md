@@ -1,0 +1,15 @@
+- [] fazer o cabeçário
+- [] fazer o botão dark mode
+- [] aplicar display flex no header
+- [] criar o campo do main
+- [] adicionar um input de pesquisa
+- [] adicionar uma caixa seletora
+- [] o input de pesquisa e a caixa seletora ficarão dentro de uma div que terá display flex
+- [] criar div onde serão inseridas as bandeiras
+- [] aplicar display grid nas bandeiras
+- [] adicionar filtro por região
+- [] ativar busca pelo nome do país
+- [] abrir detalhes do país ao clicar
+- [] visual para celular
+- [] aplicar dark mode ao clicar no botão, e vice-versa
+- [] ajustar visual para celular
