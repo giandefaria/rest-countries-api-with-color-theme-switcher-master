@@ -11,7 +11,12 @@ export default function Main() {
             <main>
                 <div>
                     <input type="search" name="country" id="country" placeholder='Search for a country...' />
-                    <select name="filter-region" id="filter-region" placeholder='Filter by Region' multiple>Filter by Region
+                    <select name="filter-region" id="filter-region" placeholder='Filter by Region'>
+                        <option value="Africa">Africa</option>
+                        <option value="America">America</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Oceania">Oceania</option>
                     </select>
                 </div>
 
