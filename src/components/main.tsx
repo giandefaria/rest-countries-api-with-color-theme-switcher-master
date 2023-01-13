@@ -6,6 +6,7 @@ export default function Main() {
         <>
             <header>
                 <h1>Where in the world?</h1>
+                <button className="mode">Dark Mode</button>
             </header>
             <main>
 
