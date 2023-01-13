@@ -9,7 +9,7 @@ export default function Main() {
                 <button className="mode">Dark Mode</button>
             </header>
             <main>
-                <div>
+                <div className='filters'>
                     <input type="search" name="country" id="country" placeholder='Search for a country...' />
                     <select name="filter-region" id="filter-region" placeholder='Filter by Region'>
                         <option value="default">Filter by Region</option>
