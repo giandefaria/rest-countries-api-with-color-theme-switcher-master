@@ -1,3 +1,8 @@
+html {
+    max-width: 90vw;
+    padding: 0 5vw;
+}
+
 header {
     display: flex;
     justify-content: space-between;
