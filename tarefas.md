@@ -2,9 +2,9 @@
 - [X] fazer o botão dark mode
 - [X] aplicar display flex no header
 - [X] criar o campo do main
-- [] adicionar um input de pesquisa
-- [] adicionar uma caixa seletora
-- [] o input de pesquisa e a caixa seletora ficarão dentro de uma div que terá display flex
+- [X] adicionar um input de pesquisa
+- [X] adicionar uma caixa seletora
+- [X] o input de pesquisa e a caixa seletora ficarão dentro de uma div que terá display flex
 - [] criar div onde serão inseridas as bandeiras
 - [] aplicar display grid nas bandeiras
 - [] adicionar filtro por região
