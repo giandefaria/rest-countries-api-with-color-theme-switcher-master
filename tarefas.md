@@ -1,7 +1,7 @@
 - [X] fazer o cabeçário
 - [X] fazer o botão dark mode
 - [X] aplicar display flex no header
-- [] criar o campo do main
+- [X] criar o campo do main
 - [] adicionar um input de pesquisa
 - [] adicionar uma caixa seletora
 - [] o input de pesquisa e a caixa seletora ficarão dentro de uma div que terá display flex

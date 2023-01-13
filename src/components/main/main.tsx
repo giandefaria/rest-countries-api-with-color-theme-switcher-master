@@ -9,6 +9,9 @@ export default function Main() {
                 <button className="mode">Dark Mode</button>
             </header>
             <main>
+                <div>
+                    <input type="search" name="country" id="country" placeholder='Search for a country...' />
+                </div>
 
             </main>
         </>
