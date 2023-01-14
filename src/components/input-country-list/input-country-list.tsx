@@ -1,6 +1,4 @@
-import { createCountryBox, mapObj } from "../create-html-element-with-list/create-html-element-with-list";
-import { countryList } from "../main/main";
-
+import { mapObj } from "../create-html-element-with-list/create-html-element-with-list";
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
 export const ReturnApiCountry = async () => {
