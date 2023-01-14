@@ -11,8 +11,18 @@ export const ReturnApiCountry = async () => {
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
     console.log(respJson);
     //countryList.innerHTML = 'teste'
-    createCountryBox();
+
+    respJson.map( (obj: any) => {
+        
+        console.log(obj.flags.png)
+        const flags = obj.flags.png
+        createCountryBox(flags);
+
+    })
+
 
 
 }
+
+
 
