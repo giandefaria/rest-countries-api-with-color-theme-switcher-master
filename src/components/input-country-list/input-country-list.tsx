@@ -1,4 +1,4 @@
-import { createCountryBox } from "../create-html-element-with-list/create-html-element-with-list";
+import { createCountryBox, mapObj } from "../create-html-element-with-list/create-html-element-with-list";
 import { countryList } from "../main/main";
 
 
@@ -24,14 +24,3 @@ export const ReturnApiCountry = async () => {
 
 
 }
-
-function mapObj(obj: any) {
-    obj.map( (obj: any) => {
-        
-        console.log(obj.flags.png)
-        const flags = obj.flags.png
-        createCountryBox(flags);
-
-    })
-}
-

@@ -22,3 +22,13 @@ export function createCountryBox(flag: any) {
     countryList.appendChild(li);
     
 }
+
+export function mapObj(obj: any) {
+    obj.map( (obj: any) => {
+        
+        console.log(obj.flags.png)
+        const flags = obj.flags.png
+        createCountryBox(flags);
+
+    })
+}
