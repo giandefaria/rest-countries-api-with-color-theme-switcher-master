@@ -20,6 +20,5 @@ export function createCountryBox(flag: any) {
     
     `
     countryList.appendChild(li);
-
     
 }
