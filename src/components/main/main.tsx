@@ -20,6 +20,9 @@ export default function Main() {
                         <option value="Oceania">Oceania</option>
                     </select>
                 </div>
+                <ul className='country-list'>
+
+                </ul>
 
             </main>
         </>
