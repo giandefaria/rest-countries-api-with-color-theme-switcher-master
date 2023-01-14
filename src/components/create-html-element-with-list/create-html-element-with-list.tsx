@@ -12,9 +12,9 @@ export function createCountryBox(flag: any, countryName: string, population: num
         </div>
         <div class='country-information'>
             <h1 class='country-name'>${countryName}</h1>
-            <h2>Population:</h2> <p class='population'>${population}</p>
-            <h2>Region:</h2> <p class='region'>${region}</p>
-            <h2>Capital:</h2> <p class='capital'>${capital}</p>
+            <h2>Population:</h2> <p class='population'>${population}</p> <br>
+            <h2>Region:</h2> <p class='region'>${region}</p> <br>
+            <h2>Capital:</h2> <p class='capital'>${capital}</p> <br>
             
         </div>
     

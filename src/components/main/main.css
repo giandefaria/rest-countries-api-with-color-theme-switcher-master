@@ -14,3 +14,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+.country-information h2, p {
+    display: inline;
+}
