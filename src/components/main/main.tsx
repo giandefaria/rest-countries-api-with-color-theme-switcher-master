@@ -1,9 +1,15 @@
 import './main.css'
 import { ReturnApiCountry } from '../input-country-list/input-country-list'
+import { useEffect } from 'react';
+
+export let countryList: HTMLElement;
 
 export default function Main() {
 
-    console.log(ReturnApiCountry())
+    useEffect(() =>  {
+        countryList = document.querySelector('.country-list') as HTMLElement;
+
+    }, [])
 
     return(
         <>
