@@ -1,6 +1,11 @@
 import './main.css'
+import { ReturnApiCountry, teste } from '../input-country-list/input-country-list'
 
 export default function Main() {
+
+    console.log(ReturnApiCountry)
+    console.log(fetch('https://restcountries.com/v3.1/all'))
+    teste();
 
     return(
         <>
