@@ -15,6 +15,10 @@ header {
     align-items: center;
 }
 
+.country-box {
+    list-style: none;
+}
+
 .country-information h2, p {
     display: inline;
 }
