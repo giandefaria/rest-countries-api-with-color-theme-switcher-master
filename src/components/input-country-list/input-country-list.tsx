@@ -12,17 +12,26 @@ export const ReturnApiCountry = async () => {
     console.log(respJson);
     //countryList.innerHTML = 'teste'
 
-    respJson.map( (obj: any) => {
+    /*respJson.map( (obj: any) => {
+        
+        console.log(obj.flags.png)
+        const flags = obj.flags.png
+        createCountryBox(flags);
+
+    })*/
+    mapObj(respJson);
+
+
+
+}
+
+function mapObj(obj: any) {
+    obj.map( (obj: any) => {
         
         console.log(obj.flags.png)
         const flags = obj.flags.png
         createCountryBox(flags);
 
     })
-
-
-
 }
-
-
 
