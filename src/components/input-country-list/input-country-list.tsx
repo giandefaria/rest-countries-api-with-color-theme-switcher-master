@@ -10,11 +10,12 @@ export const ReturnApiCountry = async () => {
 
 }
 
-export async function teste() {
+//função assincrona que captará os valores retornados da api restcountries
+export async function apiCountryReturn() {
 
-    let resultado = await fetch('https://restcountries.com/v3.1/all')
-    console.log(resultado);
-    const resultJson = resultado.json();
+    const result = await fetch('https://restcountries.com/v3.1/all'); //atribuo o retorno da api na constante result
+    console.log(result);
+    const resultJson = result.json(); //transformo a result em um json e atribuo a constante resultJson
     console.log(resultJson)
 
 }
