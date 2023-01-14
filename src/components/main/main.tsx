@@ -8,6 +8,7 @@ export default function Main() {
 
     useEffect(() =>  {
         countryList = document.querySelector('.country-list') as HTMLElement;
+        ReturnApiCountry();
 
     }, [])
 

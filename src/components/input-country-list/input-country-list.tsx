@@ -1,3 +1,5 @@
+import { countryList } from "../main/main";
+
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
 export const ReturnApiCountry = async () => {
@@ -7,6 +9,7 @@ export const ReturnApiCountry = async () => {
     console.log(resp)
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
     console.log(respJson);
+    countryList.innerHTML = 'teste'
 
 
 }
