@@ -1,7 +1,7 @@
 import { countryList } from "../main/main";
 
-
-export function createList() {
+//função que adicionará cada país no html da página
+export function createCountryBox() {
     const li = document.createElement('li');
     li.className = "country-box"
     li.innerHTML = 

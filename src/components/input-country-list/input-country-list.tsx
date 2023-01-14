@@ -1,4 +1,4 @@
-import { createList } from "../create-html-element-with-list/create-html-element-with-list";
+import { createCountryBox } from "../create-html-element-with-list/create-html-element-with-list";
 import { countryList } from "../main/main";
 
 
@@ -11,7 +11,7 @@ export const ReturnApiCountry = async () => {
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
     console.log(respJson);
     //countryList.innerHTML = 'teste'
-    createList();
+    createCountryBox();
 
 
 }
