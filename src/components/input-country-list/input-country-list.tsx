@@ -9,6 +9,10 @@ export const ReturnApiCountry = async () => {
     console.log(resp)
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
     console.log(respJson);
+    /*console.log(respJson.sort((a: any,b: any) => {
+       return a.name.common.localeCompare(b.name.common) //> b.name.common ? 1 : -1;
+    }));*/
+    alfabeticOrderObject(respJson);
     mapObj(respJson); //executo a função que fará um map no array e essa mesma função chamará outra que adicionará a lista no html
 
 }
@@ -34,4 +38,13 @@ export function listenerSelectRegionsFilter() {
             ReturnCountryPerRegion(select.value); //o valor do select selecionado será informado no parâmetro da função assíncrona ReturnCountryPerRegion
           }  
     })
+}
+
+
+function alfabeticOrderObject(obj: Array<HTMLCollection>) {
+    obj.sort((a: any,b: any) => {
+        const orderedArray = a.name.common.localeCompare(b.name.common);
+        return orderedArray;
+     })
+    console.log(obj); 
 }
