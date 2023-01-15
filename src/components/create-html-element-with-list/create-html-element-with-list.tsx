@@ -23,6 +23,8 @@ export function createCountryBox(flag: any, countryName: string, population: num
     
 }
 
+//função que fará um map no objeto indicado como parâmetro, capturando as informações necessárias da resposta
+//enviará as informações capturadas para a função createCountryBox que adicionará no html da página.
 export function mapObj(obj: any) {
     obj.map( (obj: any) => {
         
