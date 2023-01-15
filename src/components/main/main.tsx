@@ -10,7 +10,7 @@ export default function Main() {
         countryList = document.querySelector('.country-list') as HTMLElement;
         ReturnApiCountry();
         ReturnCountryPerRegion('europe');
-        listenerSelectRegionsFilter();
+        listenerSelectRegionsFilter(); //adiciono um listener nos filtros dentro da tag select, e altero a lista de países a depender da região selecionada
 
     }, [])
 

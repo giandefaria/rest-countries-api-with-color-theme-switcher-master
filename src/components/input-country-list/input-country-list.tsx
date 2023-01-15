@@ -24,6 +24,6 @@ export const ReturnCountryPerRegion = async (region: string) => {
 export function listenerSelectRegionsFilter() {
     let select = document.querySelector('select') as any
     select.addEventListener('change', (e: any) => {
-        console.log(select.value);
+        console.log(ReturnCountryPerRegion(select.value));
     })
 }
