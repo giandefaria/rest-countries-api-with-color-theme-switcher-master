@@ -38,6 +38,10 @@ main {
     justify-content: space-between;
 }
 
+.country-box {
+    background: hsl(0, 0%, 100%);
+}
+
 .flag img {
     width: 320px;
     height: 192px;
