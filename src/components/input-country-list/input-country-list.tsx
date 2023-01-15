@@ -24,7 +24,9 @@ export const ReturnCountryPerRegion = async (region: string) => {
 function indRegions() {
     const option = document.querySelectorAll('#filter-region')[0].children
     for (let index = 0; index < option.length; index++) {
-        
+        option[index].addEventListener('click', () => {
+            console.log(option[index].attributes[0].value);
+        })
         
     }
 }
