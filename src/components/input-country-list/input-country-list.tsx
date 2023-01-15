@@ -12,7 +12,8 @@ export const ReturnApiCountry = async () => {
 
 }
 
-
-export const ReturnCountryPerRegion = () => {
-
+//ReturnCountryPerRegion montará um novo objeto de acordo com a região selecionada
+export const ReturnCountryPerRegion = async (region: string) => {
+    const respRegion = await fetch(`https://restcountries.com/v3.1/region/${region}`) //a resposta da busca por região será atribuida a constante respRegion
+    console.log(respRegion);
 }
