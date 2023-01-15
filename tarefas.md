@@ -7,7 +7,7 @@
 - [X] o input de pesquisa e a caixa seletora ficarão dentro de uma div que terá display flex
 - [X] criar div onde serão inseridas as bandeiras
 - [X] inserir bandeiras
-- [] aplicar display grid nas bandeiras
+- [X] aplicar display flex nas bandeiras
 - [] adicionar filtro por região
 - [] ativar busca pelo nome do país
 - [] abrir detalhes do país ao clicar
