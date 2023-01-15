@@ -33,3 +33,8 @@ header {
     gap: 30px;
     justify-content: space-between;
 }
+
+.flag img {
+    width: 320px;
+    height: 192px;
+}
