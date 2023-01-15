@@ -11,3 +11,8 @@ export const ReturnApiCountry = async () => {
     mapObj(respJson); //executo a função que fará um map no array e essa mesma função chamará outra que adicionará a lista no html
 
 }
+
+
+export const ReturnCountryPerRegion = () => {
+
+}
