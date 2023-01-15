@@ -13,6 +13,10 @@ header {
     align-items: center;
 }
 
+main {
+    background: hsl(0, 0%, 98%);
+}
+
 .filters {
     display: flex;
     justify-content: space-between;
