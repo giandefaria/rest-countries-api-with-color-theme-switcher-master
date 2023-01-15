@@ -39,7 +39,11 @@ main {
 }
 
 .country-box {
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0px 0px 7px 6px #e5e5e554;
+    border-radius: 6px;
     list-style: none;
+    width: 320px;
 }
 
 .country-information h2, p {
@@ -53,11 +57,6 @@ main {
     justify-content: space-between;
 }
 
-.country-box {
-    background: hsl(0, 0%, 100%);
-    box-shadow: 0px 0px 7px 6px #e5e5e554;
-    border-radius: 6px;
-}
 
 .flag img {
     width: 320px;
