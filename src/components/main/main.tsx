@@ -1,5 +1,5 @@
 import './main.css'
-import { ReturnApiCountry, ReturnCountryPerRegion } from '../input-country-list/input-country-list'
+import { listenerSelectRegionsFilter, ReturnApiCountry, ReturnCountryPerRegion } from '../input-country-list/input-country-list'
 import { useEffect } from 'react';
 
 export let countryList: HTMLElement;
@@ -10,6 +10,7 @@ export default function Main() {
         countryList = document.querySelector('.country-list') as HTMLElement;
         ReturnApiCountry();
         ReturnCountryPerRegion('europe');
+        listenerSelectRegionsFilter();
 
     }, [])
 

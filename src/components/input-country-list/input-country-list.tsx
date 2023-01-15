@@ -20,13 +20,10 @@ export const ReturnCountryPerRegion = async (region: string) => {
     console.log(respRegionJson);
 }
 
-
-function indRegions() {
-    const option = document.querySelectorAll('#filter-region')[0].children
-    for (let index = 0; index < option.length; index++) {
-        option[index].addEventListener('click', () => {
-            console.log(option[index].attributes[0].value);
-        })
-        
-    }
+//função que 'ouvirá' os filtros select dentro da tag 'select'. Ao ser alterado, o valor daquele filtro será indicado no console.
+export function listenerSelectRegionsFilter() {
+    let select = document.querySelector('select') as any
+    select.addEventListener('change', (e: any) => {
+        console.log(select.value);
+    })
 }
