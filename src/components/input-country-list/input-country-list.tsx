@@ -20,6 +20,7 @@ export const ReturnCountryPerRegion = async (region: string) => {
     console.log(respRegion);
     const respRegionJson = await respRegion.json(); //transformo em um arquivo json
     console.log(respRegionJson);
+    alfabeticOrderObject(respRegionJson); //organiza a lista de países por região em ordem alfabética
     mapObj(respRegionJson); //enviará esse objeto por região para ser executado pela função mapObj
 }
 
