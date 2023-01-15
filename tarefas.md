@@ -8,7 +8,7 @@
 - [X] criar div onde serão inseridas as bandeiras
 - [X] inserir bandeiras
 - [X] aplicar display flex nas bandeiras
-- [] adicionar filtro por região
+- [X] adicionar filtro por região
 - [] ativar busca pelo nome do país
 - [] abrir detalhes do país ao clicar
 - [] visual para celular
