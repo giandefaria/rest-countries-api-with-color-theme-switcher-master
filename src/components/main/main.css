@@ -44,6 +44,11 @@ main {
     border-radius: 6px;
     list-style: none;
     width: 320px;
+    cursor: pointer;
+}
+
+.country-box:hover {
+    scale: 1.05;
 }
 
 .country-information h2, p {
