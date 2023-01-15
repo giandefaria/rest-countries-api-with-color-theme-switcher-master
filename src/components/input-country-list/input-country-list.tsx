@@ -18,6 +18,7 @@ export const ReturnCountryPerRegion = async (region: string) => {
     console.log(respRegion);
     const respRegionJson = await respRegion.json(); //transformo em um arquivo json
     console.log(respRegionJson);
+    mapObj(respRegionJson); //enviará esse objeto por região para ser executado pela função mapObj
 }
 
 //função que 'ouvirá' os filtros select dentro da tag 'select'. Ao ser alterado, o valor daquele filtro será indicado no console.
