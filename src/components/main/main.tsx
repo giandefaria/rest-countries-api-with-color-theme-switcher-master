@@ -1,5 +1,5 @@
 import './main.css'
-import { listenerSelectRegionsFilter, ReturnApiCountry, ReturnCountryPerRegion } from '../input-country-list/input-country-list'
+import { listenerSelectRegionsFilter, ReturnApiCountry } from '../input-country-list/input-country-list'
 import { useEffect } from 'react';
 
 export let countryList: HTMLElement;
