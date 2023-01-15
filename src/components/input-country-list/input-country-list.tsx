@@ -19,3 +19,12 @@ export const ReturnCountryPerRegion = async (region: string) => {
     const respRegionJson = await respRegion.json(); //transformo em um arquivo json
     console.log(respRegionJson);
 }
+
+
+function indRegions() {
+    const option = document.querySelectorAll('#filter-region')[0].children
+    for (let index = 0; index < option.length; index++) {
+        
+        
+    }
+}
