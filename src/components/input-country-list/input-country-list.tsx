@@ -1,6 +1,7 @@
 import { mapObj } from "../create-html-element-with-list/create-html-element-with-list";
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
+//informará esse objeto retornado ao mapObj() para adicionar no html da página
 export const ReturnApiCountry = async () => {
     
     //atribuo o retorno da api na constante  resp
@@ -25,6 +26,12 @@ export const ReturnCountryPerRegion = async (region: string) => {
 export function listenerSelectRegionsFilter() {
     let select = document.querySelector('select') as any
     select.addEventListener('change', (e: any) => {
-        ReturnCountryPerRegion(select.value); //o valor do select selecionado será informado no parâmetro da função assíncrona ReturnCountryPerRegion
+        if (select.value == 'default') {
+            //se nada for selecionado no filtro, retorno todos os países no html
+            ReturnApiCountry();
+            
+        } else {
+            ReturnCountryPerRegion(select.value); //o valor do select selecionado será informado no parâmetro da função assíncrona ReturnCountryPerRegion
+          }  
     })
 }
