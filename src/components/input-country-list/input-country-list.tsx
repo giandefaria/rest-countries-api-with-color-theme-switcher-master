@@ -25,7 +25,7 @@ export const ReturnCountryPerRegion = async (region: string) => {
 //função que 'ouvirá' os filtros select dentro da tag 'select'. Ao ser alterado, o valor daquele filtro será indicado no console.
 export function listenerSelectRegionsFilter() {
     let select = document.querySelector('select') as any
-    select.addEventListener('change', (e: any) => {
+    select.addEventListener('change', () => {
         if (select.value == 'default') {
             //se nada for selecionado no filtro, retorno todos os países no html
             ReturnApiCountry();
