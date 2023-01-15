@@ -9,10 +9,7 @@ export const ReturnApiCountry = async () => {
     console.log(resp)
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
     console.log(respJson);
-    /*console.log(respJson.sort((a: any,b: any) => {
-       return a.name.common.localeCompare(b.name.common) //> b.name.common ? 1 : -1;
-    }));*/
-    alfabeticOrderObject(respJson);
+    alfabeticOrderObject(respJson);//ordenará o arquivo json pelo nome dos países em ordem alfabética
     mapObj(respJson); //executo a função que fará um map no array e essa mesma função chamará outra que adicionará a lista no html
 
 }
@@ -40,7 +37,7 @@ export function listenerSelectRegionsFilter() {
     })
 }
 
-
+//função que organizará o objeto da lista de países em ordem alfabética
 function alfabeticOrderObject(obj: Array<HTMLCollection>) {
     obj.sort((a: any,b: any) => {
         const orderedArray = a.name.common.localeCompare(b.name.common);
