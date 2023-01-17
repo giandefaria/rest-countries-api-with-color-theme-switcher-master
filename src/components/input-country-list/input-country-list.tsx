@@ -43,16 +43,17 @@ export function listenerSelectRegionsFilter() {
 //esse nome(ou parte dele) será informado como parâmetro da função 
 export const SearchCountryByTheName = async (name: string) => {
     const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
-    const respNameCountryJson = await respNameCountry.json();
-    alfabeticOrderObject(respNameCountryJson);
+    const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+    alfabeticOrderObject(respNameCountryJson); //objetos em ordem alfabética pelo país
     console.log(respNameCountryJson);
+    mapObj(respNameCountryJson); //envio o objeto como parâmetro para ser exibido pela função mapObj
 }
 
 // arrow function que escuta o input de busca por nome do país, informando o valor do input como parâmetro para executar o SearchCountryByTheName;
 export const EventListenerSearchCountryByTheName = () => {
     searchCountry.addEventListener('keyup', () => {
         console.log(searchCountry.value);
-        SearchCountryByTheName(searchCountry.value);
+        SearchCountryByTheName(searchCountry.value); //indico o valor do input como parâmetro
 
     });
 };    
