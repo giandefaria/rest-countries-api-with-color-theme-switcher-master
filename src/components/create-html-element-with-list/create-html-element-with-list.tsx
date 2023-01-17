@@ -29,7 +29,7 @@ export function mapObj(obj: any) {
     countryList.innerHTML = ''; // limpo a lista antes de fazer o map com o novo objeto;
     obj.map( (obj: any) => {
         
-        console.log(obj) //aparece no console cada objeto
+        //console.log(obj) //aparece no console cada objeto
         const flags = obj.flags.png; //caputuro o link da bandeira
         const countryName = obj.name.common;  //capturo o nome do pais
         const population = obj.population; //adicionando tamanho população

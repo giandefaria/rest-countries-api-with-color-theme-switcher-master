@@ -7,9 +7,9 @@ export const ReturnApiCountry = async () => {
     
     //atribuo o retorno da api na constante  resp
     const resp = await fetch('https://restcountries.com/v3.1/all')
-    console.log(resp)
+    //console.log(resp)
     const respJson = await resp.json();  //transformo a resp em um json e atribuo a constante resultJson
-    console.log(respJson);
+    //console.log(respJson);
     alfabeticOrderObject(respJson);//ordenará o arquivo json pelo nome dos países em ordem alfabética
     mapObj(respJson); //executo a função que fará um map no array e essa mesma função chamará outra que adicionará a lista no html
 
@@ -64,5 +64,5 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
         const orderedArray = a.name.common.localeCompare(b.name.common);
         return orderedArray;
      })
-    console.log(obj); 
+    //console.log(obj); 
 }
