@@ -38,6 +38,8 @@ export function listenerSelectRegionsFilter() {
     })
 }
 
+//const SearchCountryByTheName será uma função assíncrona que buscará na api o nome do país que está sendo buscado
+//esse nome(ou parte dele) será informado como parâmetro da função 
 export const SearchCountryByTheName = async (name: string) => {
     const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
 }
