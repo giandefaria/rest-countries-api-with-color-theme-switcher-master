@@ -43,6 +43,8 @@ export function listenerSelectRegionsFilter() {
 //esse nome(ou parte dele) será informado como parâmetro da função 
 export const SearchCountryByTheName = async (name: string) => {
     const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+    const respNameCountryJson = respNameCountry.json();
+    console.log(respNameCountryJson);
 }
 
 //função que organizará o objeto da lista de países em ordem alfabética
@@ -58,6 +60,7 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
 export const EventListenerSearchCountryByTheName = () => {
     searchCountry.addEventListener('keyup', () => {
         console.log(searchCountry.value);
+
     });
 };    
     
