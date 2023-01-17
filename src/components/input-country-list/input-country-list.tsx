@@ -57,7 +57,7 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
 
 export const EventListenerSearchCountryByTheName = () => {
     searchCountry.addEventListener('keyup', () => {
-        console.log('ok');
+        console.log(searchCountry.value);
     });
 };    
     
