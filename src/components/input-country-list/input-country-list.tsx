@@ -43,9 +43,18 @@ export function listenerSelectRegionsFilter() {
 //esse nome(ou parte dele) será informado como parâmetro da função 
 export const SearchCountryByTheName = async (name: string) => {
     const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
-    const respNameCountryJson = respNameCountry.json();
+    const respNameCountryJson = await respNameCountry.json();
     console.log(respNameCountryJson);
 }
+
+// arrow function que escuta o input de busca por nome do país, informando o valor do input como parâmetro para executar o SearchCountryByTheName;
+export const EventListenerSearchCountryByTheName = () => {
+    searchCountry.addEventListener('keyup', () => {
+        console.log(searchCountry.value);
+        SearchCountryByTheName(searchCountry.value);
+
+    });
+};    
 
 //função que organizará o objeto da lista de países em ordem alfabética
 function alfabeticOrderObject(obj: Array<HTMLCollection>) {
@@ -55,12 +64,3 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
      })
     console.log(obj); 
 }
-
-
-export const EventListenerSearchCountryByTheName = () => {
-    searchCountry.addEventListener('keyup', () => {
-        console.log(searchCountry.value);
-
-    });
-};    
-    
