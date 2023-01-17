@@ -38,6 +38,10 @@ export function listenerSelectRegionsFilter() {
     })
 }
 
+export const SearchCountryByTheName = async (name: string) => {
+    const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+}
+
 //função que organizará o objeto da lista de países em ordem alfabética
 function alfabeticOrderObject(obj: Array<HTMLCollection>) {
     obj.sort((a: any,b: any) => {
@@ -46,3 +50,4 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
      })
     console.log(obj); 
 }
+
