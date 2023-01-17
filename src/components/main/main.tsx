@@ -1,5 +1,5 @@
 import './main.css'
-import { listenerSelectRegionsFilter, ReturnApiCountry } from '../input-country-list/input-country-list'
+import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../input-country-list/input-country-list'
 import { useEffect } from 'react';
 
 export let countryList: HTMLElement;
@@ -12,6 +12,7 @@ export default function Main() {
         searchCountry = document.querySelector('#search-country') as HTMLInputElement;
         ReturnApiCountry();
         listenerSelectRegionsFilter(); //adiciono um listener nos filtros dentro da tag select, e altero a lista de países a depender da região selecionada
+        EventListenerSearchCountryByTheName();
 
     }, [])
 
