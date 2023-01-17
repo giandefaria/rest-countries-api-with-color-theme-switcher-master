@@ -44,6 +44,7 @@ export function listenerSelectRegionsFilter() {
 export const SearchCountryByTheName = async (name: string) => {
     const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
     const respNameCountryJson = await respNameCountry.json();
+    alfabeticOrderObject(respNameCountryJson);
     console.log(respNameCountryJson);
 }
 
