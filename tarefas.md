@@ -9,7 +9,7 @@
 - [X] inserir bandeiras
 - [X] aplicar display flex nas bandeiras
 - [X] adicionar filtro por região
-- [] ativar busca pelo nome do país
+- [X] ativar busca pelo nome do país
 - [] abrir detalhes do país ao clicar
 - [] visual para celular
 - [] aplicar dark mode ao clicar no botão, e vice-versa
