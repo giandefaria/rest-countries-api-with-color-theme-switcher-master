@@ -1,4 +1,5 @@
 import { mapObj } from "../create-html-element-with-list/create-html-element-with-list";
+import { searchCountry } from "../main/main";
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
 //informará esse objeto retornado ao mapObj() para adicionar no html da página
@@ -53,3 +54,9 @@ function alfabeticOrderObject(obj: Array<HTMLCollection>) {
     console.log(obj); 
 }
 
+
+export const EventListenerSearchCountryByTheName = 
+    searchCountry.addEventListener('keyup', () => {
+        console.log('ok');
+    });
+    

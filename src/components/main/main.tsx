@@ -9,7 +9,7 @@ export default function Main() {
 
     useEffect(() =>  {
         countryList = document.querySelector('.country-list') as HTMLElement;
-        searchCountry = document.getElementById('#search-country') as HTMLInputElement;
+        searchCountry = document.querySelector('#search-country') as HTMLInputElement;
         ReturnApiCountry();
         listenerSelectRegionsFilter(); //adiciono um listener nos filtros dentro da tag select, e altero a lista de países a depender da região selecionada
 
