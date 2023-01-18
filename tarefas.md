@@ -14,3 +14,7 @@
 - [] visual para celular
 - [] aplicar dark mode ao clicar no botão, e vice-versa
 - [] ajustar visual para celular
+
+
+*https://www.youtube.com/watch?v=k8uLyrYJBYQ
+Vídeo tutorial rotas react
