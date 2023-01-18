@@ -1,3 +1,3 @@
-export default function countryInfo() {
+export default function CountryInfo() {
 
 };
