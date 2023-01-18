@@ -8,7 +8,7 @@ export function createCountryBox(flag: any, countryName: string, population: num
     //dentro dessa lista conterá o seguinte elemento html
     li.innerHTML = 
     `
-        <a href="/countryinfo">
+        <a href="/countryinfo${countryName}">
         <div class='flag'>
             <img src="${flag}" alt="flag" />
         </div>
