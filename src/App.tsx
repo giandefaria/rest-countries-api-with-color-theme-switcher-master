@@ -14,8 +14,8 @@ function App() {
     //adiciono as rotas dentro do routes. Indico o path (caminho no endereço html) e qual página (element) será executada
     <div className="App"> 
       <Routes>
-          <Route path='/' element={ <Main />} />
-          <Route path='/countryinfo' element={ <CountryInfo />} />
+          <Route path="/" element={ <Main />} />
+          <Route path="/countryinfo/:id" element={ <CountryInfo />} />
       </Routes> 
     </div>
   );
