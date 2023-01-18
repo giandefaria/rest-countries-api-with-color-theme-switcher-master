@@ -1,4 +1,5 @@
 import { countryList } from "../main/main";
+import { Link } from 'react-router-dom'
 
 //função que adicionará cada país no html da página
 export function createCountryBox(flag: any, countryName: string, population: number, region: string, capital: string) {

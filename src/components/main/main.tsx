@@ -2,6 +2,8 @@ import './main.css'
 import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../input-country-list/input-country-list'
 import { useEffect } from 'react';
 
+import { Link } from 'react-router-dom' //importando o componente Link, que funciona com o ancora
+
 export let countryList: HTMLElement;
 export let searchCountry: HTMLInputElement;
 
@@ -20,7 +22,7 @@ export default function Main() {
     return(
         <>
             <header>
-                <h1>Where in the world?</h1>
+                <h1><Link to="/countryinfo">Where in the world?</Link></h1>
                 <button className="mode">Dark Mode</button>
             </header>
             <main>

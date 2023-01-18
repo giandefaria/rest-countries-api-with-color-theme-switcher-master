@@ -47,6 +47,11 @@ main {
     cursor: pointer;
 }
 
+.country-box a {
+    text-decoration: none;
+    color: black;
+}
+
 .country-box:hover {
     scale: 1.05;
 }
