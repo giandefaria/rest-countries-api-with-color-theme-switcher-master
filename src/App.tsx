@@ -12,10 +12,12 @@ import { CountryInfo } from './components/country-info/country-info'; //pagina c
 function App() {
   return (
     //adiciono as rotas dentro do routes. Indico o path (caminho no endereço html) e qual página (element) será executada
+    //indico o valor variável dentro do path, adicionando dois ponto ':' antes do valor variável
+    //busco esse valor na página utilizando o hook useParams. Ver arquivo country-info.tsx
     <div className="App"> 
       <Routes>
           <Route path="/" element={ <Main />} />
-          <Route path="/countryinfo/:id" element={ <CountryInfo />} />
+          <Route path="/countryinfo/:country" element={ <CountryInfo />} />
       </Routes> 
     </div>
   );
