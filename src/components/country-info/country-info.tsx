@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"; 
+import { Link, useParams } from "react-router-dom"; 
 
 
 export const CountryInfo = (e: any) => {
@@ -8,6 +8,17 @@ export const CountryInfo = (e: any) => {
     return (
         <>
             <p>teste - { country }</p>
+            <header>
+                <h1>Where in the world?</h1>
+                <button className="mode">Dark Mode</button>
+            </header>
+            <main>
+                <button><Link to="/">Back</Link></button>
+                <section>
+                    
+                </section>
+
+            </main>
         </>
     );
 
