@@ -23,6 +23,27 @@ export const CountryInfo = (e: any) => {
             <main>
                 <button><Link to="/">Back</Link></button>
                 <section>
+                    <div className="flag-info">
+                        <img src="" alt="flag"/>
+                    </div>
+                    <div className="information-county">
+                        <h1></h1>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <h2>Border Countries:</h2>
+                            
+                        </ul>
+
+                    </div>
 
                 </section>
 
