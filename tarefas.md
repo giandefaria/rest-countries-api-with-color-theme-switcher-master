@@ -18,3 +18,5 @@
 
 *https://www.youtube.com/watch?v=k8uLyrYJBYQ
 Vídeo tutorial rotas react
+https://www.youtube.com/watch?v=t7VmF4WsLCo
+Tutorial useParams

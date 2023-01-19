@@ -28,21 +28,6 @@ export function createCountryBox(flag: any, countryName: string, population: num
     
 }
 
-function dentroHtml(flag: any, countryName: string, population: number, region: string, capital: string) {
-    return(
-        <>
-         <div className='flag'>
-            <img src={flag} alt="flag" />
-        </div>
-        <div className='country-information'>
-            <h1 className='country-name'>{countryName}</h1>
-            <h2>Population:</h2> <p className='population'>{population}</p>
-            <h2>Region:</h2> <p className='region'>{region}</p>
-            <h2>Capital:</h2> <p className='capital'>{capital}</p>
-        </div>
-        </>
-    )
-}
 
 //função que fará um map no objeto indicado como parâmetro, capturando as informações necessárias da resposta
 //enviará as informações capturadas para a função createCountryBox que adicionará no html da página.
