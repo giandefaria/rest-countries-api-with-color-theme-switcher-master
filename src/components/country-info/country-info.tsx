@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 
 //let flag: string ;
@@ -22,6 +22,19 @@ export const CountryInfo = (e: any) => {
     const { flag, setFlag } = useState();
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
+    useEffect(() => {
+        const CountryInfos = async () => {
+            const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+            const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+            console.log(respNameCountryJson);
+            setFlag(respNameCountryJson[0].flags.png);
+            //console.log(flag)
+        }
+        CountryInfos();
+
+
+    }, [])
+
        
     return (
         <>
@@ -34,7 +47,7 @@ export const CountryInfo = (e: any) => {
                 <button><Link to="/">Back</Link></button>
                 <section>
                     <div className="flag-info">
-                        {ativador && (<img src={flag} alt="flag"/>)}
+                        {flag && (<img src={flag} alt="flag"/>)}
                     </div>
                     <div className="information-county">
                         <h1></h1>
