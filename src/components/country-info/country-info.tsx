@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom"; 
 
-let flag;
+let flag: string ;
+//vou ter que usar o useState e o {xx && ()} para renderizar só após o retorno da api
 
 //const CountryInfo será uma função assíncrona que buscará na api o nome do país que está sendo buscado
 //esse nome será informado como parâmetro da função 
@@ -9,6 +10,7 @@ const CountryInfos = async (name: string) => {
     const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
     console.log(respNameCountryJson);
     flag = respNameCountryJson[0].flags.png;
+    console.log(flag)
 } 
 
 export const CountryInfo = (e: any) => {
@@ -27,7 +29,7 @@ export const CountryInfo = (e: any) => {
                 <button><Link to="/">Back</Link></button>
                 <section>
                     <div className="flag-info">
-                        <img src="" alt="flag"/>
+                        <img src={flag} alt="flag"/>
                     </div>
                     <div className="information-county">
                         <h1></h1>
