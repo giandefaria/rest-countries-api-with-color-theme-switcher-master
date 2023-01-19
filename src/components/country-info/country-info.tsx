@@ -1,10 +1,18 @@
 import { Link, useParams } from "react-router-dom"; 
 
+//const CountryInfo será uma função assíncrona que buscará na api o nome do país que está sendo buscado
+//esse nome será informado como parâmetro da função 
+const CountryInfos = async (name: string) => {
+    const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+    const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+    console.log(respNameCountryJson);
+} 
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
-    console.log(e);
+    CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
+   
     return (
         <>
             <p>teste - { country }</p>
@@ -15,7 +23,7 @@ export const CountryInfo = (e: any) => {
             <main>
                 <button><Link to="/">Back</Link></button>
                 <section>
-                    
+
                 </section>
 
             </main>
