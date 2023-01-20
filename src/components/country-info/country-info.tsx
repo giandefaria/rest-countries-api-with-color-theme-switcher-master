@@ -47,7 +47,7 @@ export const CountryInfo = (e: any) => {
                 <button><Link to="/">Back</Link></button>
                 <section>
                     <div className="flag-info">
-                        <img src={flag} alt="flag"/>
+                        { flag && (<img src={flag} alt="flag"/>)}
                     </div>
                     <div className="information-county">
                         <h1></h1>
