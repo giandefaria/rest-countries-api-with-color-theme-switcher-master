@@ -83,15 +83,19 @@ export const CountryInfo = (e: any) => {
                             <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
                             <li><h4>Currencies: </h4> <p>{currencies}</p></li>
                             {languages && 
-                            (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
-                            //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
+                                (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
+                                //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
                             }
                         </ul>
                         {borderCountries &&
-                        <ul>
-                            <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
-
-                        </ul>
+                            (//sendo borderCountries verdadeiro, executa a linha abaixo no html
+                            <ul>
+                                <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
+                                
+                            </ul>
+                            //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora
+                            //a ancora serve para abrir a página de informação do país de fronteira ao clique.
+                            )
                         }
 
                     </div>
