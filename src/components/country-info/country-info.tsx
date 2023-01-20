@@ -89,7 +89,7 @@ export const CountryInfo = (e: any) => {
                         </ul>
                         {borderCountries &&
                         <ul>
-                            <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href=""><p>{e + ' '}</p></a> )}
+                            <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
 
                         </ul>
                         }
