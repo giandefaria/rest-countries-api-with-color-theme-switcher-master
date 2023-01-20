@@ -23,6 +23,8 @@ export const CountryInfo = (e: any) => {
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
     useEffect(() => {
+        //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
+        //o nome do país é que foi importado pelo useParams;
         const CountryInfos = async () => {
             const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${country}`);
             const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
