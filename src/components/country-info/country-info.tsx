@@ -55,7 +55,7 @@ export const CountryInfo = (e: any) => {
                     </div>
                     <div className="information-county">
                         <h1></h1>
-                        <ul>
+                        <ul className="list-information">
                             <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
                             <li></li>
                             <li></li>
