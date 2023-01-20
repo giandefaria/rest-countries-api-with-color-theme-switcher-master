@@ -80,7 +80,7 @@ export const CountryInfo = (e: any) => {
                             <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
                             <li><h4>Currencies: </h4> <p>{currencies}</p></li>
                             {languages && (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
-                            //se linguagem for true, adiciono essa linha. Método join(', ') serve para adicionar uma , e espaço após cada item mapeado no array
+                            //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
                             }
                         </ul>
                         <ul>
