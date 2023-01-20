@@ -53,7 +53,6 @@ export const CountryInfo = (e: any) => {
         }
         CountryInfos();
 
-
     }, [])
 
        
@@ -80,7 +79,9 @@ export const CountryInfo = (e: any) => {
                             <li><h4>Capital: </h4> <p>{capital}</p></li>
                             <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
                             <li><h4>Currencies: </h4> <p>{currencies}</p></li>
-                            {languages && (<li><h4>Languages: </h4> <p>{languages.map( (e:any) => e.name + ',' )}</p></li>)}
+                            {languages && (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
+                            //se linguagem for true, adiciono essa linha. Método join(', ') serve para adicionar uma , e espaço após cada item mapeado no array
+                            }
                         </ul>
                         <ul>
                             <h2>Border Countries:</h2>
