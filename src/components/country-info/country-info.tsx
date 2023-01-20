@@ -23,6 +23,7 @@ export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
     const [ flag, setFlag ] = useState();
     const [ nativeName, setNativeName ] = useState();
+    const [ population, setPopulation ] = useState();
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
     useEffect(() => {
@@ -34,6 +35,7 @@ export const CountryInfo = (e: any) => {
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
             setNativeName(respNameCountryJson[0].nativeName);
+            setPopulation(respNameCountryJson[0].population);
             console.log(flag);
         }
         CountryInfos();
@@ -59,7 +61,7 @@ export const CountryInfo = (e: any) => {
                         <h1></h1>
                         <ul className="list-information">
                             <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
-                            <li></li>
+                            <li><h4>Population: </h4> <p>{population}</p></li>
                             <li></li>
                             <li></li>
                             <li></li>
