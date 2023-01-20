@@ -54,6 +54,7 @@ export const CountryInfo = (e: any) => {
             //console.log(languages.map( (array: any) => { array.name } ))
         }
         CountryInfos();
+        //console.log( borderCountries.map())
 
     }, [])
 
@@ -86,10 +87,12 @@ export const CountryInfo = (e: any) => {
                             //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
                             }
                         </ul>
+                        {borderCountries &&
                         <ul>
-                            <h2>Border Countries:</h2> {}
+                            <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <p>{e + ' '}</p> )}
 
                         </ul>
+                        }
 
                     </div>
 
