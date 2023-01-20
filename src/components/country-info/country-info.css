@@ -1,3 +1,7 @@
 .list-information {
     list-style: none;
 }
+
+.list-information h4 {
+    display: inline-block;
+}
