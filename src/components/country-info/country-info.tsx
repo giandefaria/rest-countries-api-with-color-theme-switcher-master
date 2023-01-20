@@ -27,6 +27,7 @@ export const CountryInfo = (e: any) => {
     const [ region, setRegion ] = useState();
     const [ subregion, setSubRegion ] = useState();
     const [ capital, setCapital ] = useState();
+    const [ topLevelDomain, setTopLevelDomain ] = useState();
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
     useEffect(() => {
@@ -42,6 +43,7 @@ export const CountryInfo = (e: any) => {
             setRegion(respNameCountryJson[0].region);
             setSubRegion(respNameCountryJson[0].subregion);
             setCapital(respNameCountryJson[0].capital);
+            setTopLevelDomain(respNameCountryJson[0].topLevelDomain);
             console.log(flag);
         }
         CountryInfos();
@@ -71,7 +73,7 @@ export const CountryInfo = (e: any) => {
                             <li><h4>Region: </h4> <p>{region}</p></li>
                             <li><h4>Sub Region: </h4> <p>{subregion}</p></li>
                             <li><h4>Capital: </h4> <p>{capital}</p></li>
-                            <li></li>
+                            <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
                             <li></li>
                             <li></li>
                         </ul>
