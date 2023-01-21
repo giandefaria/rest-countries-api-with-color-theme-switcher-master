@@ -3,9 +3,7 @@ import '../country-info/country-info.css';
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 
-//let flag: string ;
-//let ativador = false;
-//vou ter que usar o useState e o {xx && ()} para renderizar só após o retorno da api
+
 
 //const CountryInfo será uma função assíncrona que buscará na api o nome do país que está sendo buscado
 //esse nome será informado como parâmetro da função 
@@ -95,6 +93,7 @@ export const CountryInfo = (e: any) => {
                             </ul>
                             //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora
                             //a ancora serve para abrir a página de informação do país de fronteira ao clique.
+                            //Tarefa, adicionar countryalfa utilizando outro link para comunicação api
                             )
                         }
 
