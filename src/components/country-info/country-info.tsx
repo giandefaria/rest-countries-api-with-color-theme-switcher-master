@@ -66,7 +66,7 @@ export const CountryInfo = (e: any) => {
             </header>
             <main>
                 <button><Link to="/">Back</Link></button>
-                <section>
+                <section className='container-country'>
                     <div className="flag-info">
                         { flag && (<img src={flag} alt="flag"/>)}
                     </div>
