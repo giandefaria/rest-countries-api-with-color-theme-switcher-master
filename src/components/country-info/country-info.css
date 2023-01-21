@@ -1,3 +1,9 @@
+.container-country {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .list-information {
     list-style: none;
 }
