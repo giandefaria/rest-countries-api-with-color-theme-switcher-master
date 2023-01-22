@@ -35,22 +35,8 @@ export const CountryInfo = (e: any) => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
         const CountryInfos = async () => {
-            let respNameCountry;
-            let respNameCountryJson;
-            let status: number;
-            
-            try {
-            respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
-            status = respNameCountry.status;
-            } catch {
-                //if (status == 404) {
-                    console.log('erro');
-                    respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);  
-                    
-               // }
-            } finally {
-            
+            const respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
+            const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
             setNativeName(respNameCountryJson[0].nativeName);
@@ -64,8 +50,6 @@ export const CountryInfo = (e: any) => {
             setBorderCountries(respNameCountryJson[0].borders)
             console.log(flag);
             //console.log(languages.map( (array: any) => { array.name } ))
-            }
-            
         }
         CountryInfos();
         //console.log( borderCountries.map())
