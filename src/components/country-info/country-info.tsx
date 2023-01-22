@@ -37,9 +37,14 @@ export const CountryInfo = (e: any) => {
         const CountryInfos = async () => {
             let respNameCountry;
             let respNameCountryJson;
+            let status: number;
             
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            console.log(respNameCountry.status);
+            status = respNameCountry.status;
+            if (status = 404) {
+                console.log('erro');
+                
+            }
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
