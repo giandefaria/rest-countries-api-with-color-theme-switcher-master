@@ -39,9 +39,9 @@ export const CountryInfo = (e: any) => {
             let respNameCountryJson;
             try {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            console.log(respNameCountry);
+            console.log(respNameCountry.status);
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
-            console.log(respNameCountryJson.status);
+            
             } catch {
                 console.log('erro');
             } finally {
