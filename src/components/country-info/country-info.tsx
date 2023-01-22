@@ -43,6 +43,7 @@ export const CountryInfo = (e: any) => {
             status = respNameCountry.status;
             if (status = 404) {
                 console.log('erro');
+            respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);    
                 
             }
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
