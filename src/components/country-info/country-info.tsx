@@ -39,14 +39,18 @@ export const CountryInfo = (e: any) => {
             let respNameCountryJson;
             let status: number;
             
+            try {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            status = respNameCountry.status;
-            if (status == 404) {
-                console.log('erro');
-            respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);    
-                
-            }
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+            status = respNameCountry.status;
+            } catch {
+                //if (status == 404) {
+                    console.log('erro');
+                    respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);  
+                    
+               // }
+            } finally {
+            
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
             setNativeName(respNameCountryJson[0].nativeName);
@@ -60,6 +64,7 @@ export const CountryInfo = (e: any) => {
             setBorderCountries(respNameCountryJson[0].borders)
             console.log(flag);
             //console.log(languages.map( (array: any) => { array.name } ))
+            }
             
         }
         CountryInfos();
