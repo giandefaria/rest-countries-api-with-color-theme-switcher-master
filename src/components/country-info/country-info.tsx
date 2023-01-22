@@ -41,7 +41,7 @@ export const CountryInfo = (e: any) => {
             
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
             status = respNameCountry.status;
-            if (status = 404) {
+            if (status == 404) {
                 console.log('erro');
             respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);    
                 
