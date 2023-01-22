@@ -40,6 +40,8 @@ export const CountryInfo = (e: any) => {
             try {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+            } catch {
+                alert('erro');
             } finally {
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
