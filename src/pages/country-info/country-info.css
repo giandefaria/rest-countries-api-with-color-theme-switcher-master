@@ -1,7 +1,7 @@
 .container-country {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .list-information {

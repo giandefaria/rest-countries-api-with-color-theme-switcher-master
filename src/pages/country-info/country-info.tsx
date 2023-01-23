@@ -48,7 +48,7 @@ export const CountryInfo = (e: any) => {
                     console.log(respNameCountryJson);
                     } finally //após execução do try ou do catch, os valores abaixo serão adicionados no useState
                         {
-                        setFlag(respNameCountryJson.flags.png);
+                        setFlag(respNameCountryJson.flags.svg);
                         setNativeName(respNameCountryJson.nativeName);
                         setPopulation(respNameCountryJson.population);
                         setRegion(respNameCountryJson.region);
