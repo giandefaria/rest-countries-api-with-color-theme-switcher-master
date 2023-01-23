@@ -4,19 +4,6 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 
 
-
-//const CountryInfo será uma função assíncrona que buscará na api o nome do país que está sendo buscado
-//esse nome será informado como parâmetro da função 
-/*const CountryInfos = async (name: string) => {
-    const respNameCountry = await fetch(`https://restcountries.com/v3.1/name/${name}`);
-    const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
-    console.log(respNameCountryJson);
-    flag = respNameCountryJson[0].flags.png;
-    console.log(flag)
-    ativador = true;
-} 
-*/
-
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
     const [ flag, setFlag ] = useState();
@@ -45,6 +32,7 @@ export const CountryInfo = (e: any) => {
                 respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
                 const resp = await respNameCountry.json(); //a resposta retornada organizo em json
                 respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
+                console.log(respNameCountryJson);
                 status = respNameCountryJson.status;
 
                 //se o status retornado for 404, sinal que não foi encontrado na api, então será executado o catch
