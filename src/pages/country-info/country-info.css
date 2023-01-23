@@ -15,8 +15,11 @@
 
 }
 
-
 .list-information h4 {
     display: inline-block;
     margin: 0;
+}
+
+.borders-list a {
+    text-decoration: none;
 }
