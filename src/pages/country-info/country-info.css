@@ -4,6 +4,10 @@
     justify-content: space-between;
 }
 
+.flag-info img {
+    height: 30vh;
+}
+
 .list-information {
     list-style: none;
 }
