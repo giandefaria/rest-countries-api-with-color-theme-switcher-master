@@ -43,21 +43,10 @@ export const CountryInfo = (e: any) => {
             //Se retornar erro 404, será executado o código dentro do catch
             try {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
-            console.log(respNameCountryJson);
+            const resp = await respNameCountry.json(); //a resposta retornada organizo em json
+            respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
             status = respNameCountryJson.status;
-            setFlag(respNameCountryJson[0].flags.png);
-            setNativeName(respNameCountryJson[0].nativeName);
-            setPopulation(respNameCountryJson[0].population);
-            setRegion(respNameCountryJson[0].region);
-            setSubRegion(respNameCountryJson[0].subregion);
-            setCapital(respNameCountryJson[0].capital);
-            setTopLevelDomain(respNameCountryJson[0].topLevelDomain);
-            setCurrencies(respNameCountryJson[0].currencies[0].name);
-            setLanguages(respNameCountryJson[0].languages);
-            setBorderCountries(respNameCountryJson[0].borders)
-            console.log(flag);
-            //console.log(languages.map( (array: any) => { array.name } ))
+
                 //se o status retornado for 404, sinal que não foi encontrado na api, então será executado o catch
                 if (status == 404) {
                     throw "Not found"
@@ -65,8 +54,11 @@ export const CountryInfo = (e: any) => {
                 }
             } catch {
                 respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
-                respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+                const resp = await respNameCountry.json(); //a resposta retornada organizo em json
+                respNameCountryJson = resp;
                 console.log(respNameCountryJson);
+
+            } finally {
                 setFlag(respNameCountryJson.flags.png);
                 setNativeName(respNameCountryJson.nativeName);
                 setPopulation(respNameCountryJson.population);
@@ -79,7 +71,6 @@ export const CountryInfo = (e: any) => {
                 setBorderCountries(respNameCountryJson.borders)
                 console.log(flag);
                 //console.log(languages.map( (array: any) => { array.name } ))
-
             }
         }
         CountryInfos();
