@@ -1,4 +1,4 @@
-import { countryList } from "../main/main";
+import { countryList } from "../../pages/main/main";
 import { Link } from 'react-router-dom'
 
 //função que adicionará cada país no html da página

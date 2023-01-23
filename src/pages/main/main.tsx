@@ -1,5 +1,5 @@
 import './main.css'
-import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../input-country-list/input-country-list'
+import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../../components/input-country-list/input-country-list'
 import { useEffect } from 'react';
 
 export let countryList: HTMLElement;
