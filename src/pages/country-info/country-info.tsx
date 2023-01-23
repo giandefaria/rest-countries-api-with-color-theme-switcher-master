@@ -7,6 +7,7 @@ import { Link, useParams } from "react-router-dom";
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
     const [ flag, setFlag ] = useState();
+    const [ name, setName ] = useState();
     const [ nativeName, setNativeName ] = useState();
     const [ population, setPopulation ] = useState();
     const [ region, setRegion ] = useState();
@@ -49,7 +50,8 @@ export const CountryInfo = (e: any) => {
                     } finally //após execução do try ou do catch, os valores abaixo serão adicionados no useState
                         {
                         setFlag(respNameCountryJson.flags.svg);
-                        setNativeName(respNameCountryJson.name);
+                        setName(respNameCountryJson.name);
+                        setNativeName(respNameCountryJson.nativeName);
                         setPopulation(respNameCountryJson.population);
                         setRegion(respNameCountryJson.region);
                         setSubRegion(respNameCountryJson.subregion);
@@ -82,7 +84,7 @@ export const CountryInfo = (e: any) => {
                         { flag && (<img src={flag} alt="flag"/>)}
                     </div>
                     <div className="information-county">
-                        <h1></h1>
+                        <h1>{name}</h1>
                         <ul className="list-information">
                             <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
                             <li><h4>Population: </h4> <p>{population}</p></li>
