@@ -88,7 +88,7 @@ export const CountryInfoBorder = (e: any) => {
                         {borderCountries &&
                             (//sendo borderCountries verdadeiro, executa a linha abaixo no html
                             <ul>
-                                <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
+                                <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfoborder/${e}`}><p>{e + ' '}</p></a>)}
                                 
                             </ul>
                             //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora

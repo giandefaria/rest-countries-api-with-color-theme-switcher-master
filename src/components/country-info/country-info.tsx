@@ -35,9 +35,16 @@ export const CountryInfo = (e: any) => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
         const CountryInfos = async () => {
-            const respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+            let respNameCountry;
+            let respNameCountryJson;
+            let status;
+            try {
+            respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
+            respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
+            } catch {
+
+            } finally {
             setFlag(respNameCountryJson[0].flags.png);
             setNativeName(respNameCountryJson[0].nativeName);
             setPopulation(respNameCountryJson[0].population);
@@ -50,6 +57,7 @@ export const CountryInfo = (e: any) => {
             setBorderCountries(respNameCountryJson[0].borders)
             console.log(flag);
             //console.log(languages.map( (array: any) => { array.name } ))
+            }
         }
         CountryInfos();
         //console.log( borderCountries.map())
@@ -88,7 +96,7 @@ export const CountryInfo = (e: any) => {
                         {borderCountries &&
                             (//sendo borderCountries verdadeiro, executa a linha abaixo no html
                             <ul>
-                                <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfoborder/${e}`}><p>{e + ' '}</p></a>)}
+                                <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
                                 
                             </ul>
                             //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora
