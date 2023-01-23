@@ -17,7 +17,7 @@ import { Link, useParams } from "react-router-dom";
 } 
 */
 
-export const CountryInfoBorders = (e: any) => {
+export const CountryInfoBorder = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
     const [ flag, setFlag ] = useState();
     const [ nativeName, setNativeName ] = useState();
@@ -35,7 +35,7 @@ export const CountryInfoBorders = (e: any) => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
         const CountryInfos = async () => {
-            const respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
+            const respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
             const respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
             setFlag(respNameCountryJson[0].flags.png);
