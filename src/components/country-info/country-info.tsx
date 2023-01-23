@@ -42,41 +42,42 @@ export const CountryInfo = (e: any) => {
             //tente primeiro buscar informações no link padrão da API.
             //Se retornar erro 404, será executado o código dentro do catch
             try {
-            respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
-            const resp = await respNameCountry.json(); //a resposta retornada organizo em json
-            respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
-            status = respNameCountryJson.status;
+                respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
+                const resp = await respNameCountry.json(); //a resposta retornada organizo em json
+                respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
+                status = respNameCountryJson.status;
 
                 //se o status retornado for 404, sinal que não foi encontrado na api, então será executado o catch
                 if (status == 404) {
                     throw "Not found"
              
                 }
-            } catch {
-                respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
-                const resp = await respNameCountry.json(); //a resposta retornada organizo em json
-                respNameCountryJson = resp;
-                console.log(respNameCountryJson);
-
-            } finally {
-                setFlag(respNameCountryJson.flags.png);
-                setNativeName(respNameCountryJson.nativeName);
-                setPopulation(respNameCountryJson.population);
-                setRegion(respNameCountryJson.region);
-                setSubRegion(respNameCountryJson.subregion);
-                setCapital(respNameCountryJson.capital);
-                setTopLevelDomain(respNameCountryJson.topLevelDomain);
-                setCurrencies(respNameCountryJson.currencies[0].name);
-                setLanguages(respNameCountryJson.languages);
-                setBorderCountries(respNameCountryJson.borders)
-                console.log(flag);
-                //console.log(languages.map( (array: any) => { array.name } ))
-            }
+                } catch //caso retorne erro o código acima, será realizado a busca no link abaixo
+                    {
+                    respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
+                    const resp = await respNameCountry.json(); //a resposta retornada organizo em json
+                    respNameCountryJson = resp;
+                    console.log(respNameCountryJson);
+                    } finally //após execução do try ou do catch, os valores abaixo serão adicionados no useState
+                        {
+                        setFlag(respNameCountryJson.flags.png);
+                        setNativeName(respNameCountryJson.nativeName);
+                        setPopulation(respNameCountryJson.population);
+                        setRegion(respNameCountryJson.region);
+                        setSubRegion(respNameCountryJson.subregion);
+                        setCapital(respNameCountryJson.capital);
+                        setTopLevelDomain(respNameCountryJson.topLevelDomain);
+                        setCurrencies(respNameCountryJson.currencies[0].name);
+                        setLanguages(respNameCountryJson.languages);
+                        setBorderCountries(respNameCountryJson.borders)
+                        console.log(flag);
+                        //console.log(languages.map( (array: any) => { array.name } ))
+                        }
         }
         CountryInfos();
         //console.log( borderCountries.map())
 
-    }, [])
+    }, []);
 
        
     return (
