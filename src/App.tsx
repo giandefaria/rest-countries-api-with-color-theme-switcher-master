@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom' //instalo npm install react-router-dom. Importo essas duas funções para adicionar as rotas
 
 import Main from './pages/main/main'; //pagina principal do react. Vou atrelar ao caminho '/' que significa principal
-import { CountryInfo } from './components/country-info/country-info'; //pagina com as informações de cada país. Vou atrelar ao caminho 'countryinfo'
+import { CountryInfo } from './pages/country-info/country-info'; //pagina com as informações de cada país. Vou atrelar ao caminho 'countryinfo'
 
 
 
