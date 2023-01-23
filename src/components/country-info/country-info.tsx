@@ -42,7 +42,15 @@ export const CountryInfo = (e: any) => {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
+            status = respNameCountryJson.status;
+                if (status == 404) {
+                    throw "Not found"
+             
+                }
             } catch {
+                respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
+                respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+                console.log(respNameCountryJson);
 
             } finally {
             setFlag(respNameCountryJson[0].flags.png);
