@@ -5,7 +5,7 @@ import {Routes, Route} from 'react-router-dom' //instalo npm install react-route
 
 import Main from './components/main/main'; //pagina principal do react. Vou atrelar ao caminho '/' que significa principal
 import { CountryInfo } from './components/country-info/country-info'; //pagina com as informações de cada país. Vou atrelar ao caminho 'countryinfo'
-import { CountryInfoBorder } from './components/country-info-borders/country-info-borders';
+
 
 
 
@@ -19,7 +19,6 @@ function App() {
       <Routes>
           <Route path="/" element={ <Main />} />
           <Route path="/countryinfo/:country" element={ <CountryInfo />} />
-          <Route path="/countryinfoborder/:country" element={ <CountryInfoBorder />} />
       </Routes> 
     </div>
   );
