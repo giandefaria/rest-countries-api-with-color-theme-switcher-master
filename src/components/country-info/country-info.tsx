@@ -43,16 +43,6 @@ export const CountryInfo = (e: any) => {
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
             console.log(respNameCountryJson);
             status = respNameCountryJson.status;
-                if (status == 404) {
-                    throw "Not found"
-             
-                }
-            } catch {
-                respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
-                respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
-                console.log(respNameCountryJson);
-
-            } finally {
             setFlag(respNameCountryJson[0].flags.png);
             setNativeName(respNameCountryJson[0].nativeName);
             setPopulation(respNameCountryJson[0].population);
@@ -65,7 +55,41 @@ export const CountryInfo = (e: any) => {
             setBorderCountries(respNameCountryJson[0].borders)
             console.log(flag);
             //console.log(languages.map( (array: any) => { array.name } ))
-            }
+                if (status == 404) {
+                    throw "Not found"
+             
+                }
+            } catch {
+                respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
+                respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
+                console.log(respNameCountryJson);
+                setFlag(respNameCountryJson.flags.png);
+                setNativeName(respNameCountryJson.nativeName);
+                setPopulation(respNameCountryJson.population);
+                setRegion(respNameCountryJson.region);
+                setSubRegion(respNameCountryJson.subregion);
+                setCapital(respNameCountryJson.capital);
+                setTopLevelDomain(respNameCountryJson.topLevelDomain);
+                setCurrencies(respNameCountryJson.currencies[0].name);
+                setLanguages(respNameCountryJson.languages);
+                setBorderCountries(respNameCountryJson.borders)
+                console.log(flag);
+                //console.log(languages.map( (array: any) => { array.name } ))
+
+            } /*finally {
+            setFlag(respNameCountryJson[0].flags.png);
+            setNativeName(respNameCountryJson[0].nativeName);
+            setPopulation(respNameCountryJson[0].population);
+            setRegion(respNameCountryJson[0].region);
+            setSubRegion(respNameCountryJson[0].subregion);
+            setCapital(respNameCountryJson[0].capital);
+            setTopLevelDomain(respNameCountryJson[0].topLevelDomain);
+            setCurrencies(respNameCountryJson[0].currencies[0].name);
+            setLanguages(respNameCountryJson[0].languages);
+            setBorderCountries(respNameCountryJson[0].borders)
+            console.log(flag);
+            //console.log(languages.map( (array: any) => { array.name } ))
+            }*/
         }
         CountryInfos();
         //console.log( borderCountries.map())
