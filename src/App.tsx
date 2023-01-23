@@ -1,6 +1,3 @@
-import React from 'react';
-import logo from './logo.svg';
-
 import {Routes, Route} from 'react-router-dom' //instalo npm install react-router-dom. Importo essas duas funções para adicionar as rotas
 
 import Main from './components/main/main'; //pagina principal do react. Vou atrelar ao caminho '/' que significa principal
