@@ -38,6 +38,9 @@ export const CountryInfo = (e: any) => {
             let respNameCountry;
             let respNameCountryJson;
             let status;
+
+            //tente primeiro buscar informações no link padrão da API.
+            //Se retornar erro 404, será executado o código dentro do catch
             try {
             respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
             respNameCountryJson = await respNameCountry.json(); //a resposta retornada organizo em json
@@ -55,6 +58,7 @@ export const CountryInfo = (e: any) => {
             setBorderCountries(respNameCountryJson[0].borders)
             console.log(flag);
             //console.log(languages.map( (array: any) => { array.name } ))
+                //se o status retornado for 404, sinal que não foi encontrado na api, então será executado o catch
                 if (status == 404) {
                     throw "Not found"
              
@@ -76,20 +80,7 @@ export const CountryInfo = (e: any) => {
                 console.log(flag);
                 //console.log(languages.map( (array: any) => { array.name } ))
 
-            } /*finally {
-            setFlag(respNameCountryJson[0].flags.png);
-            setNativeName(respNameCountryJson[0].nativeName);
-            setPopulation(respNameCountryJson[0].population);
-            setRegion(respNameCountryJson[0].region);
-            setSubRegion(respNameCountryJson[0].subregion);
-            setCapital(respNameCountryJson[0].capital);
-            setTopLevelDomain(respNameCountryJson[0].topLevelDomain);
-            setCurrencies(respNameCountryJson[0].currencies[0].name);
-            setLanguages(respNameCountryJson[0].languages);
-            setBorderCountries(respNameCountryJson[0].borders)
-            console.log(flag);
-            //console.log(languages.map( (array: any) => { array.name } ))
-            }*/
+            }
         }
         CountryInfos();
         //console.log( borderCountries.map())
