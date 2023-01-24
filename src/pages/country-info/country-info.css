@@ -24,3 +24,7 @@
     text-decoration: none;
     color: black;
 }
+
+.borders-list h2 {
+    display: inline-block;
+}
