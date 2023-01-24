@@ -72,7 +72,6 @@ export const CountryInfo = (e: any) => {
        
     return (
         <>
-            <p>teste - { country }</p>
             <header>
                 <h1>Where in the world?</h1>
                 <button className="mode">Dark Mode</button>
