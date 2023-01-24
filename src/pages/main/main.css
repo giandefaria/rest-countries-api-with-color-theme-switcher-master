@@ -70,7 +70,7 @@ main {
 
 
 .flag img {
-    width: 320px;
+    width: auto;
     height: 192px;
     border-radius: 6px 6px 0 0;
 }
