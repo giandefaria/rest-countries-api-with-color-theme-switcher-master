@@ -20,18 +20,19 @@ export const CountryInfo = (e: any) => {
     const [ borderCountries, setBorderCountries ] = useState<any>();
 
     
-    //função que irá realizar um map dos nomes abreviados dos países de fronteira
+    //função que irá realizar um map dos nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
     //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
-    function countryBorderName(nameCountry: any, array: any) {
-        nameCountry.borders.map( async (e:any) => { 
+    //receberá dois parâmetros,  o objeto de informações do país, e a variável que conterá o array dos países fronteiriços
+    function countryBorderName(objInfoCountry: any, varArray: any) {
+        objInfoCountry.borders.map( async (e:any) => { 
             const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
             const resp = await nameBorder.json(); //a resposta retornada organizo em json
             console.log(resp[0]);
             console.log(resp[0].name.common);                       
-            array.push(resp[0].name.common);
-            console.log(array);
+            varArray.push(resp[0].name.common);
+            console.log(varArray);
             
-            setBorderCountries(array);
+            setBorderCountries(varArray);
      
          });
 
