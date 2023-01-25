@@ -67,6 +67,7 @@ export const CountryInfo = (e: any) => {
                         console.log(borderCountries)
                         console.log(flag);
                         //console.log(languages.map( (array: any) => { array.name } ))
+                        //tentar criar um array com o nome completo
                         respNameCountryJson.borders.map( async (e:any) => { 
                            const nameBorder = await fetch(`https://restcountries.com/v2/alpha/${e}`)
                            const resp = await nameBorder.json(); //a resposta retornada organizo em json
