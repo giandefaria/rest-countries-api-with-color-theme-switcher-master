@@ -17,6 +17,7 @@ export const CountryInfo = (e: any) => {
     const [ currencies, setCurrencies ] = useState();
     const [ languages, setLanguages ] = useState<any>();
     const [ borderCountries, setBorderCountries ] = useState<any>();
+    const [ borderCountries2, setBorderCountries2 ] = useState<any>();
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
     useEffect(() => {
@@ -26,6 +27,7 @@ export const CountryInfo = (e: any) => {
             let respNameCountry;
             let respNameCountryJson;
             let status;
+            let arrayTest: Array<any>;
 
             //tente primeiro buscar informações no link padrão da API.
             //Se retornar erro 404, será executado o código dentro do catch
@@ -60,11 +62,22 @@ export const CountryInfo = (e: any) => {
                         setCurrencies(respNameCountryJson.currencies[0].name);
                         setLanguages(respNameCountryJson.languages);
                         //setBorderCountries(respNameCountryJson.borders)
-                        setBorderCountries(respNameCountryJson.borders.map( async (e:string) => await countryBorderName(e)));
+                        setBorderCountries(respNameCountryJson.borders);
                         console.log(respNameCountryJson.borders)
                         console.log(borderCountries)
                         console.log(flag);
                         //console.log(languages.map( (array: any) => { array.name } ))
+                        respNameCountryJson.borders.map( async (e:any) => { 
+                           const nameBorder = await fetch(`https://restcountries.com/v2/alpha/${e}`)
+                           const resp = await nameBorder.json(); //a resposta retornada organizo em json
+                           console.log(resp.name);
+                           arrayTest.push(resp.name);
+                           console.log(arrayTest);
+                           
+                    
+                        });
+
+
                         }
         }
         CountryInfos();
