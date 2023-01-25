@@ -20,6 +20,7 @@ export const CountryInfo = (e: any) => {
     const [ borderCountries2, setBorderCountries2 ] = useState<any>();
     //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
+    let arrayTest: any = [];
     useEffect(() => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
@@ -27,7 +28,7 @@ export const CountryInfo = (e: any) => {
             let respNameCountry;
             let respNameCountryJson;
             let status;
-            let arrayTest: Array<any>;
+
 
             //tente primeiro buscar informações no link padrão da API.
             //Se retornar erro 404, será executado o código dentro do catch
