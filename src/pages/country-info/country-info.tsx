@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 
 
+
 export const CountryInfo = (e: any) => {
-    const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país
+    const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
     const [ flag, setFlag ] = useState();
     const [ name, setName ] = useState();
     const [ nativeName, setNativeName ] = useState();
@@ -17,10 +18,26 @@ export const CountryInfo = (e: any) => {
     const [ currencies, setCurrencies ] = useState();
     const [ languages, setLanguages ] = useState<any>();
     const [ borderCountries, setBorderCountries ] = useState<any>();
-    const [ borderCountries2, setBorderCountries2 ] = useState<any>();
-    //o nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
-    //CountryInfos(country as string); //executo a busca na api pelo nome do país constante na url
-    let arrayTest: any = [];
+
+    
+    //função que irá realizar um map dos nomes abreviados dos países de fronteira
+    //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
+    function countryBorderName(nameCountry: any, array: any) {
+        nameCountry.borders.map( async (e:any) => { 
+            const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
+            const resp = await nameBorder.json(); //a resposta retornada organizo em json
+            console.log(resp[0]);
+            console.log(resp[0].name.common);                       
+            array.push(resp[0].name.common);
+            console.log(array);
+            
+            setBorderCountries(array);
+     
+         });
+
+    }
+    
+    
     useEffect(() => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
@@ -28,12 +45,13 @@ export const CountryInfo = (e: any) => {
             let respNameCountry;
             let respNameCountryJson;
             let status;
+            let arrayTest: any = [];          
 
 
             //tente primeiro buscar informações no link padrão da API.
             //Se retornar erro 404, será executado o código dentro do catch
             try {
-                respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`);
+                respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`); //busca na api o nome country captado pelo useParams
                 const resp = await respNameCountry.json(); //a resposta retornada organizo em json
                 respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
                 console.log(respNameCountryJson);
@@ -63,38 +81,24 @@ export const CountryInfo = (e: any) => {
                         setCurrencies(respNameCountryJson.currencies[0].name);
                         setLanguages(respNameCountryJson.languages);
                         //setBorderCountries(respNameCountryJson.borders)
-                        setBorderCountries(respNameCountryJson.borders);
+                        //setBorderCountries(respNameCountryJson.borders);
                         console.log(respNameCountryJson.borders)
                         console.log(borderCountries)
                         console.log(flag);
-                        //console.log(languages.map( (array: any) => { array.name } ))
-                        //tentar criar um array com o nome completo
-                        respNameCountryJson.borders.map( async (e:any) => { 
-                           const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
-                           const resp = await nameBorder.json(); //a resposta retornada organizo em json
-                           console.log(resp[0]);
-                           console.log(resp[0].name.common);
-                           arrayTest.push(resp[0].name.common);
-                           console.log(arrayTest);
-                           
-                    
-                        });
+
+                        //função que irá realizar um map dos nomes abreviados dos países de fronteira
+                        //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
+                        countryBorderName(respNameCountryJson, arrayTest);
+                        
 
 
                         }
         }
         CountryInfos();
+        
         //console.log( borderCountries.map())
 
     }, []);
-
-    async function countryBorderName(e: string) {
-        const nameBorder = await fetch(`https://restcountries.com/v2/alpha/${e}`);
-        const resp = await nameBorder.json(); //a resposta retornada organizo em json
-        console.log(resp.name);
-        return resp.name;
-
-    }
 
        
     return (
