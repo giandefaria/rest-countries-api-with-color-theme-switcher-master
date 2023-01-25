@@ -59,7 +59,10 @@ export const CountryInfo = (e: any) => {
                         setTopLevelDomain(respNameCountryJson.topLevelDomain);
                         setCurrencies(respNameCountryJson.currencies[0].name);
                         setLanguages(respNameCountryJson.languages);
-                        setBorderCountries(respNameCountryJson.borders)
+                        //setBorderCountries(respNameCountryJson.borders)
+                        setBorderCountries(respNameCountryJson.borders.map( async (e:string) => await countryBorderName(e)));
+                        console.log(respNameCountryJson.borders)
+                        console.log(borderCountries)
                         console.log(flag);
                         //console.log(languages.map( (array: any) => { array.name } ))
                         }
