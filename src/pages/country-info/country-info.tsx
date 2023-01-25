@@ -69,6 +69,14 @@ export const CountryInfo = (e: any) => {
 
     }, []);
 
+    async function countryBorderName(e: string) {
+        const nameBorder = await fetch(`https://restcountries.com/v2/alpha/${e}`);
+        const resp = await nameBorder.json(); //a resposta retornada organizo em json
+        console.log(resp.name);
+        return resp.name;
+
+    }
+
        
     return (
         <>
