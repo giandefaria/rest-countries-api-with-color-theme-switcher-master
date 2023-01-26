@@ -125,7 +125,7 @@ export const CountryInfo = (e: any) => {
                         {borderCountries && 
                             (//sendo borderCountries verdadeiro, executa a linha abaixo no html
                             <ul className='borders-list'>
-                                <h2>Border Countries:</h2>
+                                <h4>Border Countries:</h4>
                                 <div className='borders'>
                                  {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
                                 </div> 
