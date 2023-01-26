@@ -34,7 +34,7 @@ export const CountryInfo = (e: any) => {
             //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
             setTimeout(() => {
                 setBorderCountries(varArray);
-            }, 300);
+            }, 500);
             
      
          });
