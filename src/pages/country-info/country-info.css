@@ -34,11 +34,10 @@
 
 .borders-list {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     width: 100%;
-    justify-content: flex-start;
     gap: 10px;
+    flex-direction: row;
+    align-items: center;
 }
 
 .borders-list a {
@@ -51,4 +50,11 @@
 .borders-list h2 {
     display: inline-block;
     margin: 0;
+}
+
+.borders {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
