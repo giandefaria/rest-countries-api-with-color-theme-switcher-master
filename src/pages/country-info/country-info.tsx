@@ -2,6 +2,7 @@ import './country-info.css';
 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
+import { wait } from '@testing-library/user-event/dist/utils';
 
 
 
@@ -32,7 +33,12 @@ export const CountryInfo = (e: any) => {
             varArray.push(resp[0].name.common);
             console.log(varArray);
             
-            setBorderCountries(varArray);
+            //adicionei um setTimeout para dar um delay na renderização do componente
+            //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
+            setTimeout(() => {
+                setBorderCountries(varArray);
+            }, 300);
+            
      
          });
 
@@ -129,7 +135,7 @@ export const CountryInfo = (e: any) => {
                                 //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
                             }
                         </ul>
-                        {borderCountries &&
+                        {borderCountries && 
                             (//sendo borderCountries verdadeiro, executa a linha abaixo no html
                             <ul className='borders-list'>
                                 <h2>Border Countries:</h2> {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
