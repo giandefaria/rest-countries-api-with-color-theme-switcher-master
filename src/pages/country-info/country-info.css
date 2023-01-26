@@ -25,7 +25,7 @@
     margin: 0;
 }
 
-.border-list {
+.borders-list {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -41,4 +41,5 @@
 
 .borders-list h2 {
     display: inline-block;
+    margin: 0;
 }
