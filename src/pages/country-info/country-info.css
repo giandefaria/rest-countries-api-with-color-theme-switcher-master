@@ -10,7 +10,7 @@
 }
 
 .flag-info img {
-    height: 30vh;
+    width: 100%;
 }
 
 .list-information {
@@ -23,6 +23,14 @@
 .list-information h4 {
     display: inline-block;
     margin: 0;
+}
+
+.border-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
 }
 
 .borders-list a {
