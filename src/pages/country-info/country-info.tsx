@@ -24,11 +24,8 @@ export const CountryInfo = (e: any) => {
     function countryBorderName(objInfoCountry: any, varArray: any) {
         objInfoCountry.borders.map( async (e:any) => { 
             const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
-            const resp = await nameBorder.json(); //a resposta retornada organizo em json
-            console.log(resp[0]);
-            console.log(resp[0].name.common);                       
+            const resp = await nameBorder.json(); //a resposta retornada organizo em json                      
             varArray.push(resp[0].name.common);
-            console.log(varArray);
             
             //adicionei um setTimeout para dar um delay na renderização do componente
             //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
@@ -84,11 +81,6 @@ export const CountryInfo = (e: any) => {
                         setTopLevelDomain(respNameCountryJson.topLevelDomain);
                         setCurrencies(respNameCountryJson.currencies[0].name);
                         setLanguages(respNameCountryJson.languages);
-                        //setBorderCountries(respNameCountryJson.borders)
-                        //setBorderCountries(respNameCountryJson.borders);
-                        console.log(respNameCountryJson.borders)
-                        console.log(borderCountries)
-                        console.log(flag);
 
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
@@ -99,8 +91,6 @@ export const CountryInfo = (e: any) => {
                         }
         }
         CountryInfos();
-        
-        //console.log( borderCountries.map())
 
     }, []);
 
@@ -143,11 +133,8 @@ export const CountryInfo = (e: any) => {
                             //Tarefa, adicionar countryalfa utilizando outro link para comunicação api
                             )
                         }
-
                     </div>
-
                 </section>
-
             </main>
         </>
     );
