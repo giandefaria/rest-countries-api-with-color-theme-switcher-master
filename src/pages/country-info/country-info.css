@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 80px;
+}
+
+.flag-info {
+    width: 50%;
 }
 
 .flag-info img {
