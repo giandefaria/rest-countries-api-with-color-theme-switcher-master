@@ -15,6 +15,9 @@
 
 .information-country {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .list-information {
