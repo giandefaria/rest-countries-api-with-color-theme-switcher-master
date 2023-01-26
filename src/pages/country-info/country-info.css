@@ -13,6 +13,10 @@
     width: 100%;
 }
 
+.information-country {
+    width: 50%;
+}
+
 .list-information {
     list-style: none;
     display: grid;

@@ -107,7 +107,7 @@ export const CountryInfo = (e: any) => {
                     <div className="flag-info">
                         { flag && (<img src={flag} alt="flag"/>)}
                     </div>
-                    <div className="information-county">
+                    <div className="information-country">
                         <h1>{name}</h1>
                         <ul className="list-information">
                             <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
