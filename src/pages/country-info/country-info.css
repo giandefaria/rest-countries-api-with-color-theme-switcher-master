@@ -23,6 +23,7 @@
 .borders-list a {
     text-decoration: none;
     color: black;
+    padding: 5px 14px;
 }
 
 .borders-list h2 {
