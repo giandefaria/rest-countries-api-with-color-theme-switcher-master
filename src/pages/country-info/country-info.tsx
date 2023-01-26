@@ -2,9 +2,6 @@ import './country-info.css';
 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
-import { wait } from '@testing-library/user-event/dist/utils';
-
-
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
