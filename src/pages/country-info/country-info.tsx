@@ -2,6 +2,7 @@ import './country-info.css';
 
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
+import { changeLightMode } from '../../components/change-light-mode/change-light-mode';
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
@@ -100,7 +101,7 @@ export const CountryInfo = (e: any) => {
             <header>
                 <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
-                    <button className="mode">Dark Mode</button> 
+                    <button className="mode" onClick={() => changeLightMode()}>Dark Mode</button> 
                 </section>
             </header>
             <main>
