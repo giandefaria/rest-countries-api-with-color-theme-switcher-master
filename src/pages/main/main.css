@@ -48,6 +48,7 @@ header {
 main {
     background: var(--main-color);
     padding: 0 1vw;
+    min-height: 100vh;
 }
 
 .filters {
