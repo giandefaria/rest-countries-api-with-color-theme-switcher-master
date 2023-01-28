@@ -98,46 +98,50 @@ export const CountryInfo = (e: any) => {
     return (
         <>
             <header>
-                <h1>Where in the world?</h1>
-                <button className="mode">Dark Mode</button>
+                <section className='width-container header-container'>
+                    <h1>Where in the world?</h1>
+                    <button className="mode">Dark Mode</button> 
+                </section>
             </header>
             <main>
-                <button><Link to="/">Back</Link></button>
-                <section className='container-country'>
-                    <div className="flag-info">
-                        { flag && (<img src={flag} alt="flag"/>)}
-                    </div>
-                    <div className="information-country">
-                        <h1>{name}</h1>
-                        <ul className="list-information">
-                            <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
-                            <li><h4>Population: </h4> <p>{population}</p></li>
-                            <li><h4>Region: </h4> <p>{region}</p></li>
-                            <li><h4>Sub Region: </h4> <p>{subregion}</p></li>
-                            <li><h4>Capital: </h4> <p>{capital}</p></li>
-                            <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
-                            <li><h4>Currencies: </h4> <p>{currencies}</p></li>
-                            {languages && 
-                                (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
-                                //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
-                            }
-                        </ul>
-                        {borderCountries && 
-                            (//sendo borderCountries verdadeiro, executa a linha abaixo no html
-                            <ul className='borders-list'>
-                                <h4>Border Countries:</h4>
-                                <div className='borders'>
-                                 {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
-                                </div> 
-                                
+                <div className='width-container'>
+                    <button><Link to="/">Back</Link></button>
+                    <section className='container-country'>
+                        <div className="flag-info">
+                            { flag && (<img src={flag} alt="flag"/>)}
+                        </div>
+                        <div className="information-country">
+                            <h1>{name}</h1>
+                            <ul className="list-information">
+                                <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
+                                <li><h4>Population: </h4> <p>{population}</p></li>
+                                <li><h4>Region: </h4> <p>{region}</p></li>
+                                <li><h4>Sub Region: </h4> <p>{subregion}</p></li>
+                                <li><h4>Capital: </h4> <p>{capital}</p></li>
+                                <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
+                                <li><h4>Currencies: </h4> <p>{currencies}</p></li>
+                                {languages && 
+                                    (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)
+                                    //se linguagem for true, adiciono essa linha. Método join(', ') serve para concatenar todos os elementos do array em uma string, separados por , e espaço
+                                }
                             </ul>
-                            //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora
-                            //a ancora serve para abrir a página de informação do país de fronteira ao clique.
-                            //Tarefa, adicionar countryalfa utilizando outro link para comunicação api
-                            )
-                        }
-                    </div>
-                </section>
+                            {borderCountries && 
+                                (//sendo borderCountries verdadeiro, executa a linha abaixo no html
+                                <ul className='borders-list'>
+                                    <h4>Border Countries:</h4>
+                                    <div className='borders'>
+                                    {borderCountries.map( (e:any) => <a href={`/countryinfo/${e}`}><p>{e + ' '}</p></a>)}
+                                    </div> 
+                                    
+                                </ul>
+                                //faço um map do borderCountries e vou adicionando elementos no html, atribuindo a uma ancora
+                                //a ancora serve para abrir a página de informação do país de fronteira ao clique.
+                                //Tarefa, adicionar countryalfa utilizando outro link para comunicação api
+                                )
+                            }
+                        </div>
+                    </section>
+                </div>
             </main>
         </>
     );
