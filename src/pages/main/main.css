@@ -4,6 +4,7 @@
 
 :root {
     --main-color: hsl(0, 0%, 98%);
+    --country-list-color: hsl(0, 0%, 100%);
 }
 
 html {
@@ -50,7 +51,7 @@ main {
 }
 
 .country-box {
-    background: hsl(0, 0%, 100%);
+    background: var(--country-list-color);
     box-shadow: 0px 0px 7px 6px #e5e5e554;
     border-radius: 6px;
     list-style: none;
