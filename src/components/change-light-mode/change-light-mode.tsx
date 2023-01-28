@@ -7,7 +7,7 @@ export function changeLightMode () {
     index = (index + 1) % 2; //operador módulo binário
     console.log(index);
     document.documentElement.style.setProperty ('--main-color', MainColors[index]);
-    document.documentElement.style.setProperty ('--country-list-color', WhiteAndDarkBlue[index]);
+    document.documentElement.style.setProperty ('--white-and-darkblue', WhiteAndDarkBlue[index]);
 
 
 }
