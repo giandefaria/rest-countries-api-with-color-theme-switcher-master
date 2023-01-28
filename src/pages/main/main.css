@@ -3,11 +3,11 @@
 }
 
 html {
-    max-width: 1440px;
     margin: 0 auto;
 }
 
 header {
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
