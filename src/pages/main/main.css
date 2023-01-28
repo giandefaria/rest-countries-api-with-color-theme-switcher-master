@@ -2,6 +2,10 @@
     padding: 0;
 }
 
+:root {
+    --lightOrDark-color: white;
+}
+
 html {
     margin: 0 auto;
 }
