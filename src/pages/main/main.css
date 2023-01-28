@@ -6,10 +6,12 @@ html {
     margin: 0 auto;
 }
 
-
-header {
+.width-container {
     max-width: 1440px;
     margin: auto;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
