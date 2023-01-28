@@ -11,6 +11,10 @@ html {
     margin: 0 auto;
 }
 
+header {
+    background: var(--white-and-darkblue);
+}
+
 .width-container {
     max-width: 1440px;
     margin: auto;
