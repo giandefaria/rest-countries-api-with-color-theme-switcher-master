@@ -58,6 +58,7 @@ main {
     height: 50px;
     border: none;
     background: var(--white-and-darkblue);
+    color: var(--font-color);
     box-shadow: 0px 0px 7px 6px #e5e5e554;
     border-radius: 6px;
 }
