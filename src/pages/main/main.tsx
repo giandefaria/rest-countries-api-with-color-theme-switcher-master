@@ -20,7 +20,7 @@ export default function Main() {
     return(
         <>
             <header>
-                <section className='width-container'>
+                <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
                     <button className="mode">Dark Mode</button>
                 </section>
