@@ -1,6 +1,7 @@
 import './main.css'
 import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../../components/input-country-list/input-country-list'
 import { useEffect } from 'react';
+import { changeLightMode } from '../../components/change-light-mode/change-light-mode';
 
 export let countryList: HTMLElement;
 export let searchCountry: HTMLInputElement;
@@ -22,7 +23,7 @@ export default function Main() {
             <header>
                 <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
-                    <button className="mode">Dark Mode</button>
+                    <button className="mode" onClick={() => changeLightMode()}>Dark Mode</button>
                 </section>
             </header>
             <main>
