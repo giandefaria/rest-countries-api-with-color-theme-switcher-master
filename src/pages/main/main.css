@@ -33,6 +33,13 @@ header {
     padding: 0 1vw;
 }
 
+.mode {
+    background-color: var(--white-and-darkblue);
+    color: var(--font-color);
+    border-style: none;
+    cursor: pointer;
+}
+
 main {
     background: var(--main-color);
     padding: 0 1vw;
