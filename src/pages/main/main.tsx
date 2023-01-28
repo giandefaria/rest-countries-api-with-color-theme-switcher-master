@@ -20,24 +20,28 @@ export default function Main() {
     return(
         <>
             <header>
-                <h1>Where in the world?</h1>
-                <button className="mode">Dark Mode</button>
+                <section className='width-container'>
+                    <h1>Where in the world?</h1>
+                    <button className="mode">Dark Mode</button>
+                </section>
             </header>
             <main>
-                <div className='filters'>
-                    <input type="search" name="country" id="search-country" placeholder='Search for a country...' />
-                    <select name="filter-region" id="filter-region" placeholder='Filter by Region'>
-                        <option value="default">Filter by Region</option>
-                        <option value="africa">Africa</option>
-                        <option value="america">America</option>
-                        <option value="asia">Asia</option>
-                        <option value="europe">Europe</option>
-                        <option value="oceania">Oceania</option>
-                    </select>
-                </div>
-                <ul className='country-list'>
+                <section className='width-container'>
+                    <div className='filters'>
+                        <input type="search" name="country" id="search-country" placeholder='Search for a country...' />
+                        <select name="filter-region" id="filter-region" placeholder='Filter by Region'>
+                            <option value="default">Filter by Region</option>
+                            <option value="africa">Africa</option>
+                            <option value="america">America</option>
+                            <option value="asia">Asia</option>
+                            <option value="europe">Europe</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <ul className='country-list'>
 
-                </ul>
+                    </ul>
+                </section>
 
             </main>
         </>
