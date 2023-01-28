@@ -5,6 +5,7 @@
 :root {
     --main-color: hsl(0, 0%, 98%);
     --white-and-darkblue: hsl(0, 0%, 100%);
+    --font-color: hsl(200, 15%, 8%);
 }
 
 html {
@@ -67,11 +68,15 @@ main {
 
 .country-box a {
     text-decoration: none;
-    color: black;
+    color: var(--font-color);
 }
 
 .country-box:hover {
     scale: 1.05;
+}
+
+.country-information h1, h2, p {
+    color: var(--font-color);
 }
 
 .country-information h2, p {
