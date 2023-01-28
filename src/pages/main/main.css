@@ -3,7 +3,7 @@
 }
 
 :root {
-    --lightOrDark-color: white;
+    --main-color: hsl(0, 0%, 98%);
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 }
 
 main {
-    background: hsl(0, 0%, 98%);
+    background: var(--main-color);
     padding: 0 1vw;
     height: 100vh;
 }
