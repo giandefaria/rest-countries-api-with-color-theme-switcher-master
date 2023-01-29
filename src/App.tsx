@@ -2,7 +2,7 @@ import {Routes, Route} from 'react-router-dom' //instalo npm install react-route
 
 import Main from './pages/main/main'; //pagina principal do react. Vou atrelar ao caminho '/' que significa principal
 import { CountryInfo } from './pages/country-info/country-info'; //pagina com as informações de cada país. Vou atrelar ao caminho 'countryinfo'
-
+import './pages/global-style/global-style.css'
 
 
 

@@ -2,7 +2,7 @@
     padding: 0;
 }
 
-:root {
+/*:root {
     --main-color: hsl(0, 0%, 98%);
     --white-and-darkblue: hsl(0, 0%, 100%);
     --font-color: hsl(200, 15%, 8%);
@@ -12,7 +12,7 @@
 
 ::placeholder {
     color: var(--place-holder-color);
-}
+}*/
 
 html {
     margin: 0 auto;
