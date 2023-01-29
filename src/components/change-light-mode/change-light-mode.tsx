@@ -9,11 +9,21 @@ let index = 0;
 export function changeLightMode () {
     index = (index + 1) % 2; //operador módulo binário
     console.log(index);
+    setStyle();
+    /*document.documentElement.style.setProperty ('--main-color', MainColors[index]);
+    document.documentElement.style.setProperty ('--white-and-darkblue', WhiteAndDarkBlue[index]);
+    document.documentElement.style.setProperty ('--font-color', FontColor[index]);
+    document.documentElement.style.setProperty ('--place-holder-color', PlaceHolderColor[index]);
+    document.documentElement.style.setProperty ('--shadow-color', ShadowColor[index]);*/
+
+
+}
+
+export function setStyle() {
     document.documentElement.style.setProperty ('--main-color', MainColors[index]);
     document.documentElement.style.setProperty ('--white-and-darkblue', WhiteAndDarkBlue[index]);
     document.documentElement.style.setProperty ('--font-color', FontColor[index]);
     document.documentElement.style.setProperty ('--place-holder-color', PlaceHolderColor[index]);
     document.documentElement.style.setProperty ('--shadow-color', ShadowColor[index]);
-
 
 }
