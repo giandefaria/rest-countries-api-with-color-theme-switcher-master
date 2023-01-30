@@ -7,7 +7,8 @@ export default function IndexLightOrDarkProvider( { children  }: any ) {
     const [index, setIndex] = useState('0');
 
     return (
-        <LightOrDark.Provider>
+        // dentro de value={}, indico o que os componentes filhos poderão enxergar
+        <LightOrDark.Provider value={index}>
 
             { children }
 
