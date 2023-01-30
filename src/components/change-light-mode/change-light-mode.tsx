@@ -29,6 +29,7 @@ export function changeLightMode () {
     document.documentElement.style.setProperty ('--font-color', FontColor[index]);
     document.documentElement.style.setProperty ('--place-holder-color', PlaceHolderColor[index]);
     document.documentElement.style.setProperty ('--shadow-color', ShadowColor[index]);*/
+    
 
 
 }
