@@ -13,26 +13,21 @@ export function changeLightMode () {
     if (sessionStorage.getItem('index') == '0') {
         console.log('okok')
     }
-    let teste: any = sessionStorage.getItem('index');
-    console.log(teste)
-    index = (index + 1) % 2;
-    console.log(index)
-    if (teste == 1) {
-        teste = 0;
-        sessionStorage.setItem('index', teste);     
+    let newIndex: any = sessionStorage.getItem('index');
+    //console.log(teste)
+    //index = (index + 1) % 2;
+    //console.log(index)
+    if (newIndex == 1) {
+        newIndex = 0;
+        sessionStorage.setItem('index', newIndex);     
     } else {
-    teste = (teste + 1) % 2; //operador módulo binário
-    console.log(teste);
-    sessionStorage.setItem('index', teste);
+    newIndex = (newIndex + 1) % 2; //operador módulo binário
+    console.log(newIndex);
+    sessionStorage.setItem('index', newIndex);
     }
     
     
-    setStyle(teste);
-    /*document.documentElement.style.setProperty ('--main-color', MainColors[index]);
-    document.documentElement.style.setProperty ('--white-and-darkblue', WhiteAndDarkBlue[index]);
-    document.documentElement.style.setProperty ('--font-color', FontColor[index]);
-    document.documentElement.style.setProperty ('--place-holder-color', PlaceHolderColor[index]);
-    document.documentElement.style.setProperty ('--shadow-color', ShadowColor[index]);*/
+    setStyle(newIndex);
 
 
 }

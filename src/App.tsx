@@ -6,11 +6,16 @@ import { setStyle } from './components/change-light-mode/change-light-mode';
 import './pages/global-style/global-style.css'
 import IndexLightOrDarkProvider from './context/light-or-dark';
 
-
-
+//adicionei um índice inicial para a página
+//após, caso tenha informação no sessionStorage, será executado o índice lá constante
+let initialIndex = 0;
 
 function App() {
-  setStyle(sessionStorage.getItem('index'));
+  setStyle(initialIndex);
+  if (sessionStorage.getItem('index') != null) {
+    setStyle(sessionStorage.getItem('index'));
+  }
+  
   return (
     //adiciono as rotas dentro do routes. Indico o path (caminho no endereço html) e qual página (element) será executada
     //indico o valor variável dentro do path, adicionando dois ponto ':' antes do valor variável
