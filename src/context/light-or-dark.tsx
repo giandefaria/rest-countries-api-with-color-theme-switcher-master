@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-const LightOrDark = createContext() as unknown as any;
+const LightOrDark = createContext( undefined ) as any;
 
 
 export default function IndexLightOrDarkProvider( { children  }: any ) {
@@ -18,6 +18,6 @@ export default function IndexLightOrDarkProvider( { children  }: any ) {
 
 export function useIndex() {
     const i = useContext(LightOrDark);
-    const { index, setIndex } = i;
+    const { index, setIndex } = i as any;
     return { index, setIndex};
 }
