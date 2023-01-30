@@ -1,14 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
-const LightOrDark = createContext( undefined ) as any;
+export const LightOrDark = createContext( undefined ) as any;
 
 
 export default function IndexLightOrDarkProvider( { children  }: any ) {
-    const [teste, setTeste] = useState('10');
+    const [testes, setTestes] = useState('10');
 
     return (
         // dentro de value={}, indico o que os componentes filhos poderão enxergar
-        <LightOrDark.Provider value={ {teste, setTeste} }>
+        <LightOrDark.Provider value={ {testes, setTestes} }>
 
             { children }
 
