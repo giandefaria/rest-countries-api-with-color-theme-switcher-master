@@ -10,19 +10,19 @@ import IndexLightOrDarkProvider from './context/light-or-dark';
 
 
 function App() {
-  setStyle();
+  setStyle(sessionStorage.getItem('index'));
   return (
     //adiciono as rotas dentro do routes. Indico o path (caminho no endereço html) e qual página (element) será executada
     //indico o valor variável dentro do path, adicionando dois ponto ':' antes do valor variável
     //busco esse valor na página utilizando o hook useParams. Ver arquivo country-info.tsx
-    <IndexLightOrDarkProvider> 
+  
     <div className="App"> 
       <Routes>
           <Route path="/" element={ <Main />} />
           <Route path="/countryinfo/:country" element={ <CountryInfo />} />
       </Routes> 
     </div>
-    </IndexLightOrDarkProvider>
+
   );
 }
 
