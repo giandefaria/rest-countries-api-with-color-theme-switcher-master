@@ -4,9 +4,6 @@ const FontColor = ['hsl(200, 15%, 8%)', 'hsl(0, 0%, 100%)'];
 const PlaceHolderColor = ['rgba(78, 78, 78, 0.514)', 'hsl(0, 0%, 100%)'];
 const ShadowColor = ['#e5e5e554', 'hsl(207, 26%, 17%)']
 
-let index: any;
-
-//sessionStorage.setItem('index', '0');
 
 export function changeLightMode () {
     console.log(sessionStorage.getItem('index'));
