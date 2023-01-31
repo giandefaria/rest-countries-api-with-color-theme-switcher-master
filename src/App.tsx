@@ -4,7 +4,7 @@ import Main from './pages/main/main'; //pagina principal do react. Vou atrelar a
 import { CountryInfo } from './pages/country-info/country-info'; //pagina com as informações de cada país. Vou atrelar ao caminho 'countryinfo'
 import { setStyle } from './components/change-light-mode/change-light-mode';
 import './pages/global-style/global-style.css'
-import IndexLightOrDarkProvider from './context/light-or-dark';
+
 
 
 function App() {
