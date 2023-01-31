@@ -1,3 +1,4 @@
+//valores que serão repassados no índice 0 para modo dia, e indice 1 para modo noturno
 const MainColors = ['hsl(0, 0%, 98%)', 'hsl(207, 26%, 17%)' ];
 const WhiteAndDarkBlue = ['hsl(0, 0%, 100%)', 'hsl(209, 23%, 22%)'];
 const FontColor = ['hsl(200, 15%, 8%)', 'hsl(0, 0%, 100%)'];
@@ -24,6 +25,7 @@ export function changeLightMode () {
 
 }
 
+//adicionará o valor das var()Css, que será de acordo com o indice informado.
 export function setStyle(index: any) {
     document.documentElement.style.setProperty ('--main-color', MainColors[index]);
     document.documentElement.style.setProperty ('--white-and-darkblue', WhiteAndDarkBlue[index]);
