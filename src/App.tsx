@@ -6,12 +6,10 @@ import { setStyle } from './components/change-light-mode/change-light-mode';
 import './pages/global-style/global-style.css'
 import IndexLightOrDarkProvider from './context/light-or-dark';
 
-//adicionei um índice inicial para a página
-//após, caso tenha informação no sessionStorage, será executado o índice lá constante
-let initialIndex = 0;
 
 function App() {
-  setStyle(initialIndex);
+  //caso tenha informação no sessionStorage, será executado o índice lá constante
+  //será adicionado o index no sessionStorage após clicar no botão de alterar para modo noturno
   if (sessionStorage.getItem('index') != null) {
     setStyle(sessionStorage.getItem('index'));
   }
