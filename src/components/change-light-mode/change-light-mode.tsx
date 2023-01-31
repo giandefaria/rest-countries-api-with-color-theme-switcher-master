@@ -7,22 +7,20 @@ const ShadowColor = ['#e5e5e554', 'hsl(207, 26%, 17%)']
 
 export function changeLightMode () {
     console.log(sessionStorage.getItem('index'));
-    let newIndex: any = sessionStorage.getItem('index');
+    let newIndex: any = sessionStorage.getItem('index'); //atribuo o valor a newIndex, que sera 0, 1 ou null;
     //console.log(teste)
     //index = (index + 1) % 2;
     //console.log(index)
-    if (newIndex == 1) {
+    if (newIndex == 1) { //se newIndex for igual a 1
         newIndex = 0;
         sessionStorage.setItem('index', newIndex);     
-    } else {
-    newIndex = 1; //operador módulo binário
+    } else { //se for diferente de 1 ou null
+    newIndex = 1; 
     console.log(newIndex);
     sessionStorage.setItem('index', newIndex);
     }
-    
-    
+        
     setStyle(newIndex);
-
 
 }
 
