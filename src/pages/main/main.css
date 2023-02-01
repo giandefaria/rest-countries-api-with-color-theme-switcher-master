@@ -81,6 +81,10 @@ main {
     scale: 1.05;
 }
 
+.country-information {
+    padding: 0 10% 10%;
+}
+
 .country-information h1, h2, p {
     color: var(--font-color);
 }
