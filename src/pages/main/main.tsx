@@ -23,7 +23,7 @@ export default function Main() {
             <header>
                 <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
-                    <button className="mode" onClick={() => changeLightMode()}>Dark Mode</button>
+                    <i className="fa-regular fa-moon"></i><button className="mode" onClick={() => changeLightMode()}>Dark Mode</button>
                 </section>
             </header>
             <main>
