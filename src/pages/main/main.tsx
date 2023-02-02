@@ -2,6 +2,7 @@ import './main.css'
 import { EventListenerSearchCountryByTheName, listenerSelectRegionsFilter, ReturnApiCountry } from '../../components/input-country-list/input-country-list'
 import { useEffect } from 'react';
 import { changeLightMode } from '../../components/change-light-mode/change-light-mode';
+import  moon  from '../../assets/design/icon-moon.png';
 
 export let countryList: HTMLElement;
 export let searchCountry: HTMLInputElement;
@@ -23,7 +24,7 @@ export default function Main() {
             <header>
                 <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
-                    <i className="fa-regular fa-moon"></i><button className="mode" onClick={() => changeLightMode()}>Dark Mode</button>
+                    <button className="mode" onClick={() => changeLightMode()}><img src={moon} alt="moon" width={24} /><p>Dark Mode</p></button> 
                 </section>
             </header>
             <main>

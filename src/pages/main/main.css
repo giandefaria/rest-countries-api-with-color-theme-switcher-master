@@ -1,3 +1,5 @@
+
+
 *{
     padding: 0;
 }
@@ -29,6 +31,9 @@ header {
 }
 
 .mode {
+    display: flex;
+    align-items: center;
+    gap: 11px;
     background-color: var(--white-and-darkblue);
     color: var(--font-color);
     font-weight: 600;
@@ -36,6 +41,7 @@ header {
     border-style: none;
     cursor: pointer;
 }
+
 
 main {
     background: var(--main-color);
