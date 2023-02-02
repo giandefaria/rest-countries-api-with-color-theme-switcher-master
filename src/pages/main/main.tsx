@@ -24,7 +24,7 @@ export default function Main() {
             <header>
                 <section className='width-container header-container'>
                     <h1>Where in the world?</h1>
-                    <button className="mode" onClick={() => changeLightMode()}><img src={moon} alt="moon" width={24} /><p>Dark Mode</p></button> 
+                    <button className="mode" onClick={() => changeLightMode()}><img src={moon} alt="moon"/><p>Dark Mode</p></button> 
                 </section>
             </header>
             <main>

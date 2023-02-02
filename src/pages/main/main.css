@@ -42,6 +42,10 @@ header {
     cursor: pointer;
 }
 
+.mode img {
+    width: 1.5rem;
+}
+
 
 main {
     background: var(--main-color);
