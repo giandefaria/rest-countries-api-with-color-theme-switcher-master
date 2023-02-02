@@ -1,5 +1,4 @@
 
-
 *{
     padding: 0;
 }
@@ -44,6 +43,7 @@ header {
 
 .mode img {
     width: 1.5rem;
+    filter: var(--icon-filter);
 }
 
 
