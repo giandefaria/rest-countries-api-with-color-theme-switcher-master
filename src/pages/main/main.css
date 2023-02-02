@@ -31,6 +31,8 @@ header {
 .mode {
     background-color: var(--white-and-darkblue);
     color: var(--font-color);
+    font-weight: 600;
+    font-size: 1rem;
     border-style: none;
     cursor: pointer;
 }
