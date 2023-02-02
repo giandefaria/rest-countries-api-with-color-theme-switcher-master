@@ -8,6 +8,7 @@
     --font-color: hsl(200, 15%, 8%);
     --place-holder-color: rgba(78, 78, 78, 0.514);
     --shadow-color: #e5e5e554;
+    --icon-filter: none;
 }
 
 ::placeholder {
