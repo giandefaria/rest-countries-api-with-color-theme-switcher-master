@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: space-around;
     height: -webkit-fill-available;
+    height: -moz-available;
 }
 .back-home img {
     width: 30px;
