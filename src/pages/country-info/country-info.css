@@ -18,11 +18,12 @@
 }
 .back-home img {
     width: 18px;
+    filter: var(--icon-filter);
 }
 
 .back-home p {
     margin: 0;
-    color: black;
+    color: var(--font-color);;
     font-weight: 600;
 }
 
