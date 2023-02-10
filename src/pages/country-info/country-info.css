@@ -13,12 +13,13 @@
     height: -moz-available;
 }
 .back-home img {
-    width: 30px;
+    width: 18px;
 }
 
 .back-home p {
     margin: 0;
     color: black;
+    font-weight: 600;
 }
 
 .container-country {
