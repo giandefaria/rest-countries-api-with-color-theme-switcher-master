@@ -7,12 +7,18 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     height: -webkit-fill-available;
     height: -moz-available;
 }
 .back-home img {
     width: 30px;
+}
+
+.back-home p {
+    margin: 0;
+    color: black;
 }
 
 .container-country {
