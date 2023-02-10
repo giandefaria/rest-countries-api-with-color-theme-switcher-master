@@ -1,6 +1,10 @@
 .back-home {
     width: 8%;
     height: 35px;
+    border-radius: 6px;
+    border-style: none;
+    box-shadow: 0px 0px 7px 6px var(--shadow-color);
+    background: var(--white-and-darkblue);
 }
 
 .back-home a {
@@ -8,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     height: -webkit-fill-available;
     height: -moz-available;
 }
