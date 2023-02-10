@@ -1,3 +1,19 @@
+.back-home {
+    width: 8%;
+    height: 35px;
+}
+
+.back-home a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: -webkit-fill-available;
+}
+.back-home img {
+    width: 30px;
+}
+
 .container-country {
     display: flex;
     align-items: center;
