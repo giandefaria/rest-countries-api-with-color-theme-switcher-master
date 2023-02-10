@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 import { changeLightMode } from '../../components/change-light-mode/change-light-mode';
 import  moon  from '../../assets/design/icon-moon.png';
+import backArrow from '../../assets/design/back.png';
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
@@ -107,7 +108,7 @@ export const CountryInfo = (e: any) => {
             </header>
             <main>
                 <div className='width-container'>
-                    <button><Link to="/">Back</Link></button>
+                    <button className='back-home'><Link to="/"><img src={backArrow} alt="back-arrow"/><p>Back</p></Link></button>
                     <section className='container-country'>
                         <div className="flag-info">
                             { flag && (<img src={flag} alt="flag"/>)}
