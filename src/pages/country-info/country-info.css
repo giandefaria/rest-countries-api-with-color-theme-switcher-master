@@ -50,6 +50,14 @@
     gap: 35px;
 }
 
+.information-country h1, h4, p {
+    color: var(--font-color);
+}
+
+.information-country h4 {
+    font-weight: 600;
+}
+
 .list-information {
     list-style: none;
     display: grid;
