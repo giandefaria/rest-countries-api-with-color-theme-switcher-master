@@ -19,7 +19,7 @@ header {
 .width-container h1 {
     color: var(--font-color);
     font-weight: 800;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 .header-container {
@@ -104,6 +104,7 @@ main {
 
 .country-information h2, p {
     display: inline;
+    font-size: 1rem;
 }
 
 .country-list {
