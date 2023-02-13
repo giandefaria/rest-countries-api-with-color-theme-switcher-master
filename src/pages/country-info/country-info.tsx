@@ -1,10 +1,10 @@
 import './country-info.css';
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 import { changeLightMode } from '../../components/change-light-mode/change-light-mode';
 import  moon  from '../../assets/design/icon-moon.png';
 import backArrow from '../../assets/design/back.png';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
@@ -145,6 +145,21 @@ export const CountryInfo = (e: any) => {
                                 )
                             }
                         </div>
+                    </section>
+                    <section className='map'>
+                            {mapLocalization &&
+                            (
+                                <MapContainer center={mapLocalization} zoom={4} scrollWheelZoom={false} style={{height: "500px"}}>
+                                    <TileLayer
+                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+                                    <Marker position={mapLocalization}>
+                                    </Marker>
+                              </MapContainer>
+
+                            )
+                            }
                     </section>
                 </div>
             </main>
