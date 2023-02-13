@@ -85,6 +85,7 @@ export const CountryInfo = (e: any) => {
                         setTopLevelDomain(respNameCountryJson.topLevelDomain);
                         setCurrencies(respNameCountryJson.currencies[0].name);
                         setLanguages(respNameCountryJson.languages);
+                        setMapLocalization(respNameCountryJson.latlng);
 
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
