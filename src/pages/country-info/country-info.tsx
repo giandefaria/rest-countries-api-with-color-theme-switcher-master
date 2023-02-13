@@ -149,7 +149,7 @@ export const CountryInfo = (e: any) => {
                     <section className='map'>
                             {mapLocalization &&
                             (
-                                <MapContainer center={mapLocalization} zoom={4} scrollWheelZoom={false} style={{height: "500px"}}>
+                                <MapContainer center={mapLocalization} zoom={4} scrollWheelZoom={true} style={{height: "500px"}}>
                                     <TileLayer
                                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
