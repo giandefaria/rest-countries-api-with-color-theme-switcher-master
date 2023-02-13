@@ -14,3 +14,7 @@
 ::placeholder {
     color: var(--place-holder-color);
 }
+
+body {
+    margin: 0;
+}
