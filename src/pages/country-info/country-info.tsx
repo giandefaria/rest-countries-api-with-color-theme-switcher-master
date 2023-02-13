@@ -19,6 +19,7 @@ export const CountryInfo = (e: any) => {
     const [ currencies, setCurrencies ] = useState();
     const [ languages, setLanguages ] = useState<any>();
     const [ borderCountries, setBorderCountries ] = useState<any>();
+    const [ mapLocalization, setMapLocalization ] = useState();
 
     
     //função que irá realizar um map dos nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
