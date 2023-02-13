@@ -11,11 +11,6 @@ header {
     background: var(--white-and-darkblue);
 }
 
-.width-container {
-    max-width: 1440px;
-    margin: auto;
-}
-
 .width-container h1 {
     color: var(--font-color);
     font-weight: 800;
