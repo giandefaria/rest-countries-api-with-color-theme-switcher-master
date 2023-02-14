@@ -42,6 +42,7 @@ export const CountryInfo = (e: any) => {
          });
 
     }
+
     
     
     useEffect(() => {
@@ -117,7 +118,7 @@ export const CountryInfo = (e: any) => {
                             { flag && (<img src={flag} alt="flag"/>)}
                         </div>
                         <div className="information-country">
-                            <h1>{name}</h1> <img src="" alt="" />
+                            <h1>{name}</h1> <img src={wikipediaIcon} alt="wikipediaIcon" width={'30px'} onClick={() => {window.open(`https://en.wikipedia.org/wiki/${country}`)}}/>
                             <ul className="list-information">
                                 <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
                                 <li><h4>Population: </h4> <p>{population}</p></li>
