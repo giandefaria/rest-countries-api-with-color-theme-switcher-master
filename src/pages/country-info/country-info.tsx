@@ -5,6 +5,7 @@ import { changeLightMode } from '../../components/change-light-mode/change-light
 import  moon  from '../../assets/design/icon-moon.png';
 import backArrow from '../../assets/design/back.png';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
+import wikipediaIcon from '../../assets/design/wikipedia.png'
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
@@ -116,7 +117,7 @@ export const CountryInfo = (e: any) => {
                             { flag && (<img src={flag} alt="flag"/>)}
                         </div>
                         <div className="information-country">
-                            <h1>{name}</h1>
+                            <h1>{name}</h1> <img src="" alt="" />
                             <ul className="list-information">
                                 <li><h4>Native Name: </h4> <p>{nativeName}</p></li>
                                 <li><h4>Population: </h4> <p>{population}</p></li>
