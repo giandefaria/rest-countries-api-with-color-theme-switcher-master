@@ -9,6 +9,8 @@ html {
 
 header {
     background: var(--white-and-darkblue);
+    border-bottom: var(--shadow-color);
+    border-bottom-style: solid;
 }
 
 .width-container h1 {
