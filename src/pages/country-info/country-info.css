@@ -58,6 +58,16 @@
     font-weight: 800;
 }
 
+.title-and-icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.title-and-icon img {
+    cursor: pointer;
+}
+
 .list-information {
     list-style: none;
     display: grid;
