@@ -54,15 +54,7 @@ main {
     align-items: center;
 }
 
-#search-country {
-    height: 50px;
-    border: none;
-    background: var(--white-and-darkblue);
-    box-shadow: 0px 0px 7px 6px var(--shadow-color);
-    border-radius: 6px;
-}
-
-#filter-region {
+#search-country, #filter-region {
     height: 50px;
     border: none;
     background: var(--white-and-darkblue);
@@ -71,6 +63,15 @@ main {
     border-radius: 6px;
 }
 
+/*#filter-region {
+    height: 50px;
+    border: none;
+    background: var(--white-and-darkblue);
+    color: var(--font-color);
+    box-shadow: 0px 0px 7px 6px var(--shadow-color);
+    border-radius: 6px;
+}
+*/
 .country-box {
     background: var(--white-and-darkblue);
     box-shadow: 0px 0px 7px 6px var(--shadow-color);
