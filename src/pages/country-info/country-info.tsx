@@ -42,8 +42,6 @@ export const CountryInfo = (e: any) => {
          });
 
     }
-
-    
     
     useEffect(() => {
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
