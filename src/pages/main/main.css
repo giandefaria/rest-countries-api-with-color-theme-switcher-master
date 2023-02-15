@@ -65,6 +65,11 @@ main {
     border-radius: 6px;
 }
 
+#search-country {
+    padding-left: 30px;
+
+}
+
 /*#filter-region {
     height: 50px;
     border: none;
