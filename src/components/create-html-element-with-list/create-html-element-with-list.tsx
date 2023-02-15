@@ -1,5 +1,22 @@
 import { countryList } from "../../pages/main/main";
-import { Link } from 'react-router-dom'
+
+
+//função que fará um map no objeto indicado como parâmetro, capturando as informações necessárias da resposta
+//enviará as informações capturadas para a função createCountryBox que adicionará no html da página.
+export function mapObj(obj: any) {
+    countryList.innerHTML = ''; // limpo a lista antes de fazer o map com o novo objeto;
+    obj.map( (obj: any) => {
+        
+        //console.log(obj) //aparece no console cada objeto
+        const flags = obj.flags.png; //caputuro o link da bandeira
+        const countryName = obj.name.common;  //capturo o nome do pais
+        const population = obj.population; //adicionando tamanho população
+        const region = obj.region; //adicionando a região do país
+        const capital = obj.capital; //adicionando a capital
+        createCountryBox(flags, countryName, population, region, capital); //executo a função que adicionará o box no html, indicando o atributo do objeto iterado no momento
+
+    })
+}
 
 //função que adicionará cada país no html da página
 export function createCountryBox(flag: any, countryName: string, population: number, region: string, capital: string) {
@@ -26,22 +43,4 @@ export function createCountryBox(flag: any, countryName: string, population: num
 
     countryList.appendChild(li);
     
-}
-
-
-//função que fará um map no objeto indicado como parâmetro, capturando as informações necessárias da resposta
-//enviará as informações capturadas para a função createCountryBox que adicionará no html da página.
-export function mapObj(obj: any) {
-    countryList.innerHTML = ''; // limpo a lista antes de fazer o map com o novo objeto;
-    obj.map( (obj: any) => {
-        
-        //console.log(obj) //aparece no console cada objeto
-        const flags = obj.flags.png; //caputuro o link da bandeira
-        const countryName = obj.name.common;  //capturo o nome do pais
-        const population = obj.population; //adicionando tamanho população
-        const region = obj.region; //adicionando a região do país
-        const capital = obj.capital; //adicionando a capital
-        createCountryBox(flags, countryName, population, region, capital); //executo a função que adicionará o box no html, indicando o atributo do objeto iterado no momento
-
-    })
 }
