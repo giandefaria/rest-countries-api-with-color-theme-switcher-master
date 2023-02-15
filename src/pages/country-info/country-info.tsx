@@ -151,7 +151,7 @@ export const CountryInfo = (e: any) => {
                     <section className='map'>
                             {mapLocalization &&
                             (
-                                <MapContainer center={mapLocalization} zoom={4} scrollWheelZoom={true} style={{height: "500px"}}>
+                                <MapContainer center={mapLocalization} zoom={4} scrollWheelZoom={false} style={{height: "500px"}}>
                                     <TileLayer
                                         attribution='&copy; <a href="https://carto.com/">carto.com</a> contributors'
                                         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png"
