@@ -136,6 +136,23 @@ main {
 }
 
 @media screen and (max-width: 400px) {
+    
+    
+    .header-container {
+        padding: 1vh 7vw;
+    }
+
+    .width-container h1 {
+        font-size: 1em;
+    }
+
+    .width-container p {
+        font-size: 0.8em;
+    }
+
+    main {
+        padding: 5vh 7vw 0;
+    }
 
     .filters {
         flex-direction: column;
