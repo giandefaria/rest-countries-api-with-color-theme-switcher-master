@@ -127,3 +127,10 @@ main {
     height: 192px;
     border-radius: 6px 6px 0 0;
 }
+
+@media screen and (max-width: 800px) {
+    .country-list {
+        justify-content: center;
+    }
+    
+}
