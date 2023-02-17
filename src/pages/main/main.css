@@ -142,5 +142,9 @@ main {
         gap: 30px;
         align-items: flex-start;
     }
+
+    #search-country {
+        width: 100%;
+    }
     
 }
