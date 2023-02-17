@@ -163,5 +163,9 @@ main {
     #search-country {
         width: 100%;
     }
+
+    #filter-region {
+        width: 55%;
+    }
     
 }
