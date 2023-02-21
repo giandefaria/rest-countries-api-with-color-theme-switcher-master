@@ -6,36 +6,35 @@ import  moon  from '../../assets/design/icon-moon.png';
 import backArrow from '../../assets/design/back.png';
 import { MapContainer, Marker, TileLayer } from 'react-leaflet'
 import wikipediaIcon from '../../assets/design/wikipedia.png'
+import { CountryInformation } from '../../interfaces/country-information';
 
 export const CountryInfo = (e: any) => {
     const { country } = useParams(); //hook para importar a id do link, que no caso será o nome do país. O nome dentro das chaves tem que ser igual ao indicado na rota, que no caso é :country
-    const [ flag, setFlag ] = useState();
-    const [ name, setName ] = useState();
-    const [ nativeName, setNativeName ] = useState();
-    const [ population, setPopulation ] = useState();
-    const [ region, setRegion ] = useState();
-    const [ subregion, setSubRegion ] = useState();
-    const [ capital, setCapital ] = useState();
-    const [ topLevelDomain, setTopLevelDomain ] = useState();
-    const [ currencies, setCurrencies ] = useState();
+    const [ flag, setFlag ] = useState<any>();
+    const [ name, setName ] = useState<string>();
+    const [ nativeName, setNativeName ] = useState<string>();
+    const [ population, setPopulation ] = useState<number>();
+    const [ region, setRegion ] = useState<string>();
+    const [ subregion, setSubRegion ] = useState<string>();
+    const [ capital, setCapital ] = useState<string>();
+    const [ topLevelDomain, setTopLevelDomain ] = useState<Array<string> | string>();
+    const [ currencies, setCurrencies ] = useState<any>();
     const [ languages, setLanguages ] = useState<any>();
     const [ borderCountries, setBorderCountries ] = useState<any>();
-    const [ mapLocalization, setMapLocalization ] = useState();
+    const [ mapLocalization, setMapLocalization ] = useState<any>();
 
     
     //função que irá realizar um map dos nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
     //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
     //receberá como parâmetro o objeto de informações do país
-    function countryBorderName(objInfoCountry: any/*, varArray: any*/) {
-        console.log(objInfoCountry)
+    function countryBorderName(objInfoCountry: CountryInformation | undefined) {
+        
         let arrBorderCountries: Array<string> = [];
-        objInfoCountry.borders.map( async (e:any) => { 
+        objInfoCountry?.borders.map( async (e:any) => { 
             const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
             const resp = await nameBorder.json(); //a resposta retornada organizo em json                      
             
             arrBorderCountries.push(resp[0].name.common);
-            
-            console.log(arrBorderCountries)
 
             //adicionei um setTimeout para dar um delay na renderização do componente
             //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
@@ -62,9 +61,10 @@ export const CountryInfo = (e: any) => {
             try {
                 respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`); //busca na api o nome country captado pelo useParams
                 const resp = await respNameCountry.json(); //a resposta retornada organizo em json
-                respNameCountryJson = resp[0];//ele retorna um índice, por isso indico o 0 para padronizar
+                respNameCountryJson = resp[0] as CountryInformation;
                 console.log(respNameCountryJson);
                 status = respNameCountryJson.status;
+            
 
                 //se o status retornado for 404, sinal que não foi encontrado na api, então será executado o catch
                 if (status == 404) {
@@ -74,22 +74,22 @@ export const CountryInfo = (e: any) => {
                 } catch //caso retorne erro o código acima, será realizado a busca no link abaixo
                     {
                     respNameCountry = await fetch(`https://restcountries.com/v2/alpha/${country}`);
-                    const resp = await respNameCountry.json(); //a resposta retornada organizo em json
+                    const resp: CountryInformation = await respNameCountry.json(); //a resposta retornada organizo em json
                     respNameCountryJson = resp;
                     console.log(respNameCountryJson);
                     } finally //após execução do try ou do catch, os valores abaixo serão adicionados no useState
                         {
-                        setFlag(respNameCountryJson.flags.svg);
-                        setName(respNameCountryJson.name);
-                        setNativeName(respNameCountryJson.nativeName);
-                        setPopulation(respNameCountryJson.population);
-                        setRegion(respNameCountryJson.region);
-                        setSubRegion(respNameCountryJson.subregion);
-                        setCapital(respNameCountryJson.capital);
-                        setTopLevelDomain(respNameCountryJson.topLevelDomain);
-                        setCurrencies(respNameCountryJson.currencies[0].name);
-                        setLanguages(respNameCountryJson.languages);
-                        setMapLocalization(respNameCountryJson.latlng);
+                        setFlag(respNameCountryJson?.flags.svg);
+                        setName(respNameCountryJson?.name);
+                        setNativeName(respNameCountryJson?.nativeName);
+                        setPopulation(respNameCountryJson?.population);
+                        setRegion(respNameCountryJson?.region);
+                        setSubRegion(respNameCountryJson?.subregion);
+                        setCapital(respNameCountryJson?.capital);
+                        setTopLevelDomain(respNameCountryJson?.topLevelDomain);
+                        setCurrencies(respNameCountryJson?.currencies[0].name);
+                        setLanguages(respNameCountryJson?.languages);
+                        setMapLocalization(respNameCountryJson?.latlng);
 
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries

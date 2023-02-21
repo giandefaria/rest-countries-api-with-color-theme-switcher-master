@@ -4,6 +4,7 @@ import { countryList } from "../../pages/main/main";
 //função que fará um map no objeto indicado como parâmetro, capturando as informações necessárias da resposta
 //enviará as informações capturadas para a função createCountryBox que adicionará no html da página.
 export function mapObj(obj: any) {
+    console.log(obj)
     countryList.innerHTML = ''; // limpo a lista antes de fazer o map com o novo objeto;
     obj.map( (obj: any) => {
         

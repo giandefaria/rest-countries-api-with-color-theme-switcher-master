@@ -1,5 +1,6 @@
 export interface CountryInformation {
-    flags: HTMLImageElement;
+
+    flags: any;
     name: string;
     nativeName: string;
     population: number;
@@ -10,5 +11,7 @@ export interface CountryInformation {
     currencies: Array<any>;
     languages: any;
     latlng: Array<number>;
+    status: any;
+    borders: Array<string>;
 
 }
