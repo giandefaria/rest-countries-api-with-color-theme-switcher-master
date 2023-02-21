@@ -11,10 +11,10 @@
 - [X] adicionar filtro por região
 - [X] ativar busca pelo nome do país
 - [X] abrir detalhes do país ao clicar
-- [ ] inserir detalhes do país nessa nova página
-- [] visual para celular
-- [] aplicar dark mode ao clicar no botão, e vice-versa
-- [] ajustar visual para celular
+- [X] inserir detalhes do país nessa nova página
+- [X] visual para celular
+- [X] aplicar dark mode ao clicar no botão, e vice-versa
+- [X] ajustar visual para celular
 
 
 *https://www.youtube.com/watch?v=k8uLyrYJBYQ
