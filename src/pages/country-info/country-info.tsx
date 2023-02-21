@@ -25,17 +25,22 @@ export const CountryInfo = (e: any) => {
     
     //função que irá realizar um map dos nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
     //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
-    //receberá dois parâmetros,  o objeto de informações do país, e a variável que conterá o array dos países fronteiriços
-    function countryBorderName(objInfoCountry: any, varArray: any) {
+    //receberá como parâmetro o objeto de informações do país
+    function countryBorderName(objInfoCountry: any/*, varArray: any*/) {
+        console.log(objInfoCountry)
+        let arrBorderCountries: Array<string> = [];
         objInfoCountry.borders.map( async (e:any) => { 
             const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
             const resp = await nameBorder.json(); //a resposta retornada organizo em json                      
-            varArray.push(resp[0].name.common);
             
+            arrBorderCountries.push(resp[0].name.common);
+            
+            console.log(arrBorderCountries)
+
             //adicionei um setTimeout para dar um delay na renderização do componente
             //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
             setTimeout(() => {
-                setBorderCountries(varArray);
+                setBorderCountries(arrBorderCountries);
             }, 500);
             
      
@@ -49,8 +54,7 @@ export const CountryInfo = (e: any) => {
         const CountryInfos = async () => {
             let respNameCountry;
             let respNameCountryJson;
-            let status;
-            let arrayTest: any = [];          
+            let status;        
 
 
             //tente primeiro buscar informações no link padrão da API.
@@ -89,13 +93,13 @@ export const CountryInfo = (e: any) => {
 
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
-                        countryBorderName(respNameCountryJson, arrayTest);
+                        countryBorderName(respNameCountryJson);
                         
 
 
                         }
         }
-        CountryInfos();
+        CountryInfos(); //chamo a função expression
 
     }, []);
 
