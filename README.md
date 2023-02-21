@@ -58,17 +58,23 @@ src="./src/assets/design/rest-countries-main-page.png"
 <p align="center">
 
 * Design da página principal no celular
-<image
-src="./src/assets/design/rest-countries-main-page-mobile.png"
-/>
+<div align="center">
+  <image
+  src="./src/assets/design/rest-countries-main-page-mobile.png"
+  />
+</div>
+
 </p>
+
 
 <p align="center">
 
 * Design da página de informações do país no desktop
-<image
-src="./src/assets/design/rest-countries-country-info-page.png"
-/>
+<div align="center">
+  <image
+  src="./src/assets/design/rest-countries-country-info-page.png"
+  />
+</div>
 
 </p>
 
