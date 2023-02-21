@@ -140,6 +140,15 @@
         gap: 6px;
     }
 
+    .borders-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .borders-list h4 {
+        width: 100%;
+    }
+
 
 
 
