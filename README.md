@@ -48,7 +48,7 @@ Os principais arquivos do projeto são:
 
 <p align="center">
 
-* Design no desktop
+* Design da página principal no desktop
 <image
 src="./src/assets/design/rest-countries-main-page.png"
 />
@@ -57,9 +57,34 @@ src="./src/assets/design/rest-countries-main-page.png"
 
 <p align="center">
 
-* Design no celular
+* Design da página principal no celular
 <image
-src="./src/assets/design/mobile-design.jpg"
+src="./src/assets/design/rest-countries-main-page-mobile.png"
+/>
+</p>
+
+<p align="center">
+
+* Design da página de informações do país no desktop
+<image
+src="./src/assets/design/rest-countries-country-info-page.png"
+/>
+
+</p>
+
+<p align="center">
+
+* Design da página de informações do país no celular
+<image
+src="./src/assets/design/rest-countries-country-info-page-mobile.png"
+/>
+</p>
+
+<p align="center">
+
+* Design da página no modo noturno
+<image
+src="./src/assets/design/rest-countries-main-page-dark-mode.png"
 />
 </p>
 
