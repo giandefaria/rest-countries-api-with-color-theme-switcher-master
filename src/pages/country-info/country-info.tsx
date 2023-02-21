@@ -23,6 +23,7 @@ export const CountryInfo = (e: any) => {
     const [ borderCountries, setBorderCountries ] = useState<any>();
     const [ mapLocalization, setMapLocalization ] = useState<any>();
 
+
     
     //função que irá realizar um map do array com os nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
     //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
@@ -46,6 +47,7 @@ export const CountryInfo = (e: any) => {
     }
     
     useEffect(() => {
+
         //const CountryInfo será uma função assíncrona que buscará na api o nome do país que foi clicado
         //o nome do país é que foi importado pelo useParams;
         const CountryInfos = async () => {
@@ -91,6 +93,12 @@ export const CountryInfo = (e: any) => {
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
                         countryBorderName(respNameCountryJson);
+
+                        //diminui o height do mapa
+                        if(window.innerWidth < 401) {
+                            let mapa: HTMLElement | any = document.querySelector('.leaflet-container');
+                            mapa.style.height = '400px';
+                        }
 
                         }
         }

@@ -152,5 +152,9 @@
     .borders {
         width: 100%;
     }
+    
+    .leaflet-container {
+        height: 300px;
+    }
 
 }
