@@ -117,3 +117,32 @@
 .map {
     padding: 40px 0 65px 0;
 }
+
+@media screen and (max-width: 440px) {
+
+    .container-country {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .flag-info {
+        width: 100%;
+    }
+
+    .information-country {
+        width: 100%;
+        gap: 5px;
+    }
+
+    .list-information {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+
+
+
+
+
+}
