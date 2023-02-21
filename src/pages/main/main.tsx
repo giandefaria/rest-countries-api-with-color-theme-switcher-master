@@ -12,7 +12,7 @@ export default function Main() {
     useEffect(() =>  {
         countryList = document.querySelector('.country-list') as HTMLElement;
         searchCountry = document.querySelector('#search-country') as HTMLInputElement;
-        ReturnApiCountry();
+        ReturnApiCountry(); //vai adicionar a lista inicial
         listenerSelectRegionsFilter(); //adiciono um listener nos filtros dentro da tag select, e altero a lista de países a depender da região selecionada
         EventListenerSearchCountryByTheName(); //adiciono um listener no input de pesquisa por nome
 

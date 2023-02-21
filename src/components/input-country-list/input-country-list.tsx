@@ -1,5 +1,6 @@
 import { mapObj } from "../create-html-element-with-list/create-html-element-with-list";
 import { searchCountry } from "../../pages/main/main";
+import { OptionHTMLAttributes } from "react";
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
 //informará esse objeto retornado ao mapObj() para adicionar no html da página
@@ -20,15 +21,16 @@ export const ReturnCountryPerRegion = async (region: string) => {
     const respRegion = await fetch(`https://restcountries.com/v3.1/region/${region}`) //a resposta da busca por região será atribuida a constante respRegion
     console.log(respRegion);
     const respRegionJson = await respRegion.json(); //transformo em um arquivo json
-    console.log(respRegionJson);
+    //console.log(respRegionJson);
     alfabeticOrderObject(respRegionJson); //organiza a lista de países por região em ordem alfabética
     mapObj(respRegionJson); //enviará esse objeto por região para ser executado pela função mapObj
 }
 
 //função que 'ouvirá' os filtros select dentro da tag 'select'. Ao ser alterado, o valor daquele filtro será indicado no console.
 export function listenerSelectRegionsFilter() {
-    let select = document.querySelector('select') as any
+    let select = document.querySelector('select') as any;
     select.addEventListener('change', () => {
+        //console.log(select.value);
         if (select.value == 'default') {
             //se nada for selecionado no filtro, retorno todos os países no html
             ReturnApiCountry();

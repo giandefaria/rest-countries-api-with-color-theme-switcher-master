@@ -1,7 +1,7 @@
 export interface CountryInformation {
 
     flags: any;
-    name: string;
+    name: any;
     nativeName: string;
     population: number;
     region: string;
@@ -12,6 +12,6 @@ export interface CountryInformation {
     languages: any;
     latlng: Array<number>;
     status: any;
-    borders: Array<string>;
+    borders: Array<string>
 
 }
