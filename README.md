@@ -81,17 +81,22 @@ src="./src/assets/design/rest-countries-main-page.png"
 <p align="center">
 
 * Design da página de informações do país no celular
-<image
-src="./src/assets/design/rest-countries-country-info-page-mobile.png"
-/>
+<div align="center">
+  <image
+  src="./src/assets/design/rest-countries-country-info-page-mobile.png"
+  />
+</div>
+
 </p>
 
 <p align="center">
 
 * Design da página no modo noturno
-<image
-src="./src/assets/design/rest-countries-main-page-dark-mode.png"
-/>
+<div align="center">
+  <image
+  src="./src/assets/design/rest-countries-main-page-dark-mode.png"
+  />
+</div>
 </p>
 
 # 🛠 Feito com <a name="id05"></a>
