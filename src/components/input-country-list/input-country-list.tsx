@@ -30,7 +30,7 @@ export function listenerSelectRegionsFilter() {
     let select = document.querySelector('select') as any;
     select.addEventListener('change', () => {
         //console.log(select.value);
-        if (select.value == 'default') {
+        if (select.value === 'default') {
             //se nada for selecionado no filtro, retorno todos os países no html
             ReturnApiCountry();
             
