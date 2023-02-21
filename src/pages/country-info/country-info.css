@@ -142,6 +142,10 @@
         gap: 5px;
     }
 
+    .title-and-icon h1 {
+        font-size: 1.4em;
+    }
+
     .list-information {
         grid-template-columns: 1fr;
         gap: 6px;
