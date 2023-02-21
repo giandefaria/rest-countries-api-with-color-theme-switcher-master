@@ -24,26 +24,24 @@ export const CountryInfo = (e: any) => {
     const [ mapLocalization, setMapLocalization ] = useState<any>();
 
     
-    //função que irá realizar um map dos nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
+    //função que irá realizar um map do array com os nomes abreviados dos países de fronteira, pois a API retorna os nomes dos países de fronteira de forma abreviada
     //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
     //receberá como parâmetro o objeto de informações do país
     function countryBorderName(objInfoCountry: CountryInformation | undefined) {
         
         let arrBorderCountries: Array<string> = [];
         objInfoCountry?.borders.map( async (e:any) => { 
+            
             const nameBorder = await fetch(`https://restcountries.com/v3.1/alpha/${e}`)
             const resp = await nameBorder.json(); //a resposta retornada organizo em json                      
-            
-            arrBorderCountries.push(resp[0].name.common);
-
+            arrBorderCountries.push(resp[0].name.common);//empurro o valor para dentro do array
+     
+        });
             //adicionei um setTimeout para dar um delay na renderização do componente
             //fiz isso para evitar o bug de renderizar o border countries antes do termino do map.
             setTimeout(() => {
                 setBorderCountries(arrBorderCountries);
             }, 500);
-            
-     
-         });
 
     }
     
@@ -55,14 +53,13 @@ export const CountryInfo = (e: any) => {
             let respNameCountryJson;
             let status;        
 
-
             //tente primeiro buscar informações no link padrão da API.
             //Se retornar erro 404, será executado o código dentro do catch
             try {
                 respNameCountry = await fetch(`https://restcountries.com/v2/name/${country}`); //busca na api o nome country captado pelo useParams
                 const resp = await respNameCountry.json(); //a resposta retornada organizo em json
                 respNameCountryJson = resp[0] as CountryInformation;
-                console.log(respNameCountryJson);
+                //console.log(respNameCountryJson);
                 status = respNameCountryJson.status;
             
 
@@ -94,12 +91,10 @@ export const CountryInfo = (e: any) => {
                         //função que irá realizar um map dos nomes abreviados dos países de fronteira
                         //fará uma pesquisa na api da abreviação e adicionará o nome completo no borderCountries
                         countryBorderName(respNameCountryJson);
-                        
-
 
                         }
         }
-        CountryInfos(); //chamo a função expression
+        CountryInfos(); //chamo a function expression
 
     }, []);
 

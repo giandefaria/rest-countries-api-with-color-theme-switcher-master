@@ -1,6 +1,5 @@
 import { mapObj } from "../create-html-element-with-list/create-html-element-with-list";
 import { searchCountry } from "../../pages/main/main";
-import { OptionHTMLAttributes } from "react";
 
 //returnApiCountry será uma função assíncrona que captará os valores retornados da api restcountries
 //informará esse objeto retornado ao mapObj() para adicionar no html da página

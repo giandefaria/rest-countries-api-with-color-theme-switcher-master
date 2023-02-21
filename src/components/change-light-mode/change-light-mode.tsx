@@ -11,13 +11,13 @@ export function changeLightMode () {
     
     let newIndex: any = sessionStorage.getItem('index'); //atribuo o valor do sessionStorage a newIndex, que sera 0, 1 ou null;
     
-    //se newIndex for igual a 1
+    //se newIndex for igual a 1, seto newIndex a 0 e retorno ao modo de dia
     if (newIndex == 1) { 
         newIndex = 0;
         sessionStorage.setItem('index', newIndex);     
-    } else { //se for diferente de 1 ou null
+    } else { //se for diferente de 1 ou null, newIndex será 1, ligando o modo noturno
     newIndex = 1; 
-    console.log(newIndex);
+    //console.log(newIndex);
     sessionStorage.setItem('index', newIndex);
     }
     
