@@ -132,7 +132,7 @@ export const CountryInfo = (e: any) => {
                                 <li><h4>Region: </h4> <p>{region}</p></li>
                                 <li><h4>Sub Region: </h4> <p>{subregion}</p></li>
                                 <li><h4>Capital: </h4> <p>{capital}</p></li>
-                                <li><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
+                                <li className='top-level-domain'><h4>Top Level Domain: </h4> <p>{topLevelDomain}</p></li>
                                 <li><h4>Currencies: </h4> <p>{currencies}</p></li>
                                 {languages && 
                                     (<li><h4>Languages: </h4> <p>{(languages.map( (e:any) => e.name )).join(', ')}</p></li>)

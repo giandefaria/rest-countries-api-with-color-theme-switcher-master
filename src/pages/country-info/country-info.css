@@ -153,8 +153,8 @@
         width: 100%;
     }
     
-    .leaflet-container {
-        height: 300px;
+    .top-level-domain {
+        margin-top: 40px;
     }
 
 }
