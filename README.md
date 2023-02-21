@@ -26,26 +26,31 @@
 
 # Proposta do projeto <a name="id01"></a>
 
-Em construção!
+O layout do projeto é baseado no chalenge do site Frontend Mentor: https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca
+
+A proposta desse projeto consiste em montar uma página que possui uma lista de todos os países, contendo as informações de cada país, além de ser possível realizar a busca de um país por nome ou por região. Foi incrementado no projeto o modo noturno, um mapa que mostra a localização do país no mapa mundi, além de um ícone do wikipedia para ter mais informações sobre o país.
 
 
 # Desafios <a name="id02"> </a>
 
-!em construção
+Desafio foi criar uma página variável onde se alterasse apenas as informações do país que foi selecionado. Para isso, foi utilizado o react-router-dom e o hook useParams(), de modo que esse valor variável do link fosse capturado e feito uma requisição para a API retornar as informações daquele país, renderizando a página com os elementos HTML e mostrando do mapa a localização do país pela latitude e longitude informada pela API.
 
 # Arquivos do projeto <a name="id03"> </a>
 
 Os principais arquivos do projeto são: 
-* main.tsx => Responsável pela tipagem html da página, além da execução da renderização inicial da lista na página
-*
+* diretório pages => localização do arquivo da página inicial (main) e de informação dos países (country-info)
+* diretório components => estão localizadas metódos que serão utilizados no projeto: change-light-mode (para mudar tema da página);  crete-html-element-with-list (recebe a lista de países e monta no html); input-country-list (funções que montam a lista de países de acordo com o tipo de busca);
+* diretório assets => contém as imagens utilizadas no projeto
+* diretório interfaces => contem a interface utilizada no retorno da API, para habilitar o autocomplete e evitar que o desenvolvedor coloque informações que não são retornadas pela API.
+* diretório styles => contém os estilos utilizados globalmente no projeto
 
 # Visual do projeto <a name="id04"></a>
 
 <p align="center">
 
-* Design no computador
+* Design no desktop
 <image
-src="./src/assets/design/desktop-design.jpg"
+src="./src/assets/design/rest-countries-main-page.png"
 />
 
 </p>
@@ -64,6 +69,8 @@ src="./src/assets/design/mobile-design.jpg"
 
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
+- [RestCountriesAPI](https://restcountries.com/)
+- [Leaflet](https://leafletjs.com/examples/quick-start/)
 
 
 <br />
