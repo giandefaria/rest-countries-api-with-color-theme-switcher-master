@@ -1,15 +1,15 @@
 <p align="center">
   <image
-  src="https://img.shields.io/github/languages/count/giandefaria/ip-address-tracker-master"
+  src="https://img.shields.io/github/languages/count/giandefaria/rest-countries-api-with-color-theme-switcher-master"
   />
   <image
-  src="https://img.shields.io/github/languages/top/giandefaria/ip-address-tracker-master"
+  src="https://img.shields.io/github/languages/top/giandefaria/rest-countries-api-with-color-theme-switcher-master"
   />
   <image
-  src="https://img.shields.io/github/last-commit/giandefaria/ip-address-tracker-master"
+  src="https://img.shields.io/github/last-commit/giandefaria/rest-countries-api-with-color-theme-switcher-master"
   />
   <image
-  src="https://img.shields.io/github/watchers/giandefaria/ip-address-tracker-master"
+  src="https://img.shields.io/github/watchers/giandefaria/rest-countries-api-with-color-theme-switcher-master"
   />
 </p>
 
@@ -118,7 +118,7 @@ src="./src/assets/design/rest-countries-main-page.png"
 Clone este repositório usando o comando:
 
 ```bash
-git clone https://github.com/giandefaria/ip-address-tracker-master.git
+git clone https://github.com/giandefaria/rest-countries-api-with-color-theme-switcher-master.git
 ```
 
 Na pasta do projeto instale as dependências com uso do npm ou yarn
